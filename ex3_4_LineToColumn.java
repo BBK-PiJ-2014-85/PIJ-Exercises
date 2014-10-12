@@ -16,8 +16,15 @@ public class ex3_4_LineToColumn {
      
      for (int i=0; i < input.length(); i++)
      {
-         System.out.println(input.charAt(i));
-     }
+         if (input.charAt(i) == ' ')
+             {
+             System.out.println();
+            }
+            else
+             {
+         System.out.print(input.charAt(i));
+             }
+    }
 
 
 }
