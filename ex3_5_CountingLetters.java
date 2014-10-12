@@ -12,20 +12,25 @@ public class ex3_5_CountingLetters {
         
         System.out.println("Please insert your line");
         Scanner kb = new Scanner (System.in);
-        String input = kb.nextLine();
+        String line = kb.nextLine();
+        
+        System.out.println("Please insert the letter to check for (first charcter will be taken)");
+        String letter = kb.next();
+        
+        char letterChar = Character.toLowerCase(letter.charAt(0));
         
         int c=0;
         
-        for (int i=0; i < input.length(); i++)
+        for (int i=0; i < line.length(); i++)
         {
-            if (input.charAt(i) == 'e' || input.charAt(i) == 'E')
+            if (Character.toLowerCase(line.charAt(i)) == letterChar )
             {
                 c++;
             }
         }
 
         
-        System.out.println("There are " + c + " e's in that line.");
+        System.out.println("There are " + c + " " + letterChar + "'s in that line.");
         
     }
     
