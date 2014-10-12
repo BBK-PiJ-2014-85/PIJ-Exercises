@@ -19,24 +19,68 @@ public class ex3_1_Calculator {
             {
                 exit = true;
             }
+            else if (checkDouble (input))
+            {
+                numbers[providedNums] = Double.parseDouble(input);
+                providedNums++;
+            }
             else
             {
-                System.out.println(checkDouble(input));
-                
-                
-                
-          //  try
-           // {
-           //     numbers[providedNums]   = Double.parseDouble(input);
-           //     providedNums++;
-           // }
-           // catch ()
-            //    {
-             //       System.out.println("Not a valid number");
-              //  }
+                System.out.println("Not a valid floating number, nor a quit command.");
             }
             
         }
+        
+        if (!exit)
+        {
+            System.out.println("Please enter a calculation to perform:");
+            System.out.println("     Input \"+\" to add together");
+            System.out.println("     Input \"-\" to substract the second from the first");
+            System.out.println("     Input \"/\" to divide the first by the second");
+            System.out.println("     Input \"*\" to multiply them together");
+            System.out.println("     Input \"q\" to quit");
+            
+            boolean calculated = false;
+ 
+            while (!calculated)
+            {
+                Scanner kb = new Scanner(System.in);
+                String input = kb.nextLine();
+                
+            if (input.equals("+"))
+            {
+                System.out.println(numbers[0] + numbers[1]);
+                calculated = true;
+            }
+            else if (input.equals("-"))
+            {
+                System.out.println(numbers[0] - numbers[1]);
+                calculated = true;
+            }
+            else if (input.equals("*"))
+            {
+                System.out.println(numbers[0] * numbers[1]);
+                calculated = true;
+            }
+            else if (input.equals("/"))
+            {
+                System.out.println(numbers[0] / numbers[1]);
+                calculated = true;
+            }
+            else if (input.equals("q"))
+            {
+                System.out.println("Program aborted.");
+                calculated = true;
+            }
+            else
+            {
+                System.out.println("Invalid input. Please input a valid input");
+            }
+            }
+            
+        }
+        
+        
     }
     
         public static boolean checkDouble(String input)
