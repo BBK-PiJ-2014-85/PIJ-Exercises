@@ -50,35 +50,28 @@ public class e4_5_BinaryAndHexidecimal {
     static String Bin2Hex(String input)
     {
         int decimalNumber = binary2decimal(input);
-       
         return Dec2Hex(decimalNumber);
-        
     }
     
-    static String Dec2Hex(int decimal)
-    {
-        int highestHexPower = 0, decimalValueRemaining = decimal;
-        String hex = "0x";
-        
-        while (Math.pow(16,highestHexPower) <= decimal)
+        static String Dec2Hex(int decimal)
         {
-            highestHexPower++;
-        }
+            int highestHexPower = 0, decimalValueRemaining = decimal;
+            String hex = "0x";
         
-        for (int i = highestHexPower - 1; i >= 0; i--)
-        {
-            int nextHexNumber = (int) Math.floor(decimalValueRemaining / Math.pow(16,i));
-            decimalValueRemaining -= (Math.pow(16,i) * nextHexNumber);
-            hex += DecToHexChar(nextHexNumber);
-        }
+            while (Math.pow(16,highestHexPower) <= decimal)
+            {
+                highestHexPower++;
+            }
         
-        return hex;
-    }
-
-    static String Hex2Bin(String input)
-    {
-        return "";
-    }
+            for (int i = highestHexPower - 1; i >= 0; i--)
+            {
+                int nextHexNumber = (int) Math.floor(decimalValueRemaining / Math.pow(16,i));
+                decimalValueRemaining -= (Math.pow(16,i) * nextHexNumber);
+                hex += DecToHexChar(nextHexNumber);
+            }
+        
+            return hex;
+        }
     
     static int binary2decimal(String binary)
     {
@@ -90,13 +83,44 @@ public class e4_5_BinaryAndHexidecimal {
         
         return decimal;
     }
+    
+    static String DecToHexChar(int value)
+    {
+        
+        switch (value) {
+            case 0: return "0";
+            case 1: return "1";
+            case 2: return "2";
+            case 3: return "3";
+            case 4: return "4";
+            case 5: return "5";
+            case 6: return "6";
+            case 7: return "7";
+            case 8: return "8";
+            case 9: return "9";
+            case 10: return "a";
+            case 11: return "b";
+            case 12: return "c";
+            case 13: return "d";
+            case 14: return "e";
+            case 15: return "f";
+            default: return "X";
+        }
+    }
+    
 
-    static int hex2decimal(String hex)
+    static String Hex2Bin(String input)
+    {
+        int decimalValue = Hex2Decimal(input.substring(2));
+        return Dec2Bin(decimalValue);
+    }
+    
+    static int Hex2Decimal(String hex)
     {
         int decimal = 0;
-        for (int i = 0; i < hex.length() - 2; i++)
+        for (int i = 0; i < hex.length(); i++)
         {
-            decimal += Math.pow(16,i) * (hex.charAt(hex.length() - 1 - i) == '1' ? 1 : 0);
+            decimal += Math.pow(16,i) * HexCharToDec(hex.charAt(hex.length() - 1 - i));
         }
         
         return decimal;
@@ -126,34 +150,9 @@ public class e4_5_BinaryAndHexidecimal {
         }
         
     }
-
-    static String DecToHexChar(int value)
-    {
-        
-        switch (value) {
-            case 0: return "0";
-            case 1: return "1";
-            case 2: return "2";
-            case 3: return "3";
-            case 4: return "4";
-            case 5: return "5";
-            case 6: return "6";
-            case 7: return "7";
-            case 8: return "8";
-            case 9: return "9";
-            case 10: return "a";
-            case 11: return "b";
-            case 12: return "c";
-            case 13: return "d";
-            case 14: return "e";
-            case 15: return "f";
-            default: return "X";
-        }
-        
-    }
-
     
-    static String decimal2binary(int number)
+
+    static String Dec2Bin(int number)
     {
         int highestPower = 0;
         String output = "";
