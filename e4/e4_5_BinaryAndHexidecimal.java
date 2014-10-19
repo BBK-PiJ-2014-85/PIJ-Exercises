@@ -50,15 +50,14 @@ public class e4_5_BinaryAndHexidecimal {
     static String Bin2Hex(String input)
     {
         int decimalNumber = binary2decimal(input);
-        
-        
+       
         return Dec2Hex(decimalNumber);
         
     }
     
     static String Dec2Hex(int decimal)
     {
-        int highestHexPower =0, decimalValueRemaining = decimal;
+        int highestHexPower = 0, decimalValueRemaining = decimal;
         String hex = "0x";
         
         while (Math.pow(16,highestHexPower) <= decimal)
@@ -68,7 +67,7 @@ public class e4_5_BinaryAndHexidecimal {
         
         for (int i = highestHexPower - 1; i >= 0; i--)
         {
-            int nextHexNumber = (int) Math.floor(Math.pow(16,i) / decimalValueRemaining);
+            int nextHexNumber = (int) Math.floor(decimalValueRemaining / Math.pow(16,i));
             decimalValueRemaining -= (Math.pow(16,i) * nextHexNumber);
             hex += DecToHexChar(nextHexNumber);
         }
