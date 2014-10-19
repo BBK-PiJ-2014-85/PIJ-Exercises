@@ -7,7 +7,7 @@
 
 import java.util.Scanner;
 
-public class e4_4_PracticeDoubles{
+public class e4_3_PracticeDoubles{
     
     public static void main (String[] args){
         
