@@ -23,9 +23,9 @@ public class e4_4_PracticeDoubles{
         years = kb.nextInt();
 
         System.out.print("Whats the interest rate? ");
-        rate = kb.nestDouble();
+        rate = kb.nextDouble();
         
-        
+        //Formulas doesnt appear to make sense, will need to give more thought
         
         
     }
