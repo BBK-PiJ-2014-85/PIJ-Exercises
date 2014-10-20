@@ -49,8 +49,25 @@ public class e4_5_BinaryAndHexidecimal {
     
     static String Bin2Hex(String input)
     {
-        int decimalNumber = binary2decimal(input);
-        return Dec2Hex(decimalNumber);
+ 
+        //take last 4 to convert into hex, using zeros if less than 4 remai
+        
+        String hex = "0x";
+        
+        while (input.length() % 4 != 0)
+        {
+            input = "0" + input;
+        }
+        
+        int i=0;
+        
+        while (i < input.length())
+        {
+            hex += Bin4BitToHex(input.substring(i, i+4));
+            i+=4;
+        }
+        
+        return hex;
     }
     
         static String Dec2Hex(int decimal)
@@ -111,8 +128,21 @@ public class e4_5_BinaryAndHexidecimal {
 
     static String Hex2Bin(String input)
     {
-        int decimalValue = Hex2Decimal(input.substring(2));
-        return Dec2Bin(decimalValue);
+        
+        input = input.substring(2);
+        String binary="";
+
+        for (int i = 0; i < input.length(); i++)
+        {
+            binary += HexToBin4Bit(input.charAt(i));
+        }
+        
+        while (binary.charAt(0) == '0')
+        {
+            binary = binary.substring(1);
+        }
+        
+        return binary;
     }
     
     static int Hex2Decimal(String hex)
@@ -125,6 +155,53 @@ public class e4_5_BinaryAndHexidecimal {
         
         return decimal;
     }
+    
+    static String Bin4BitToHex(String binBit)
+    {
+        switch (binBit){
+                case "0000": return "0";
+                case "0001": return "1";
+                case "0010": return "2";
+                case "0011": return "3";
+                case "0100": return "4";
+                case "0101": return "5";
+                case "0110": return "6";
+                case "0111": return "7";
+                case "1000": return "8";
+                case "1001": return "9";
+                case "1010": return "a";
+                case "1011": return "b";
+                case "1100": return "c";
+                case "1101": return "d";
+                case "1110": return "e";
+                case "1111": return "f";
+                default: return "X";
+        }
+    }
+
+    static String HexToBin4Bit(char hexChar)
+    {
+        switch (hexChar){
+            case '0': return "0000";
+            case '1': return  "0001";
+            case '2': return  "0010";
+            case '3': return  "0011";
+            case '4': return  "0100";
+            case '5': return  "0101";
+            case '6': return  "0110";
+            case '7': return  "0111";
+            case '8': return  "1000";
+            case '9': return  "1001";
+            case 'a': return  "1010";
+            case 'b': return  "1011";
+            case 'c': return  "1100";
+            case 'd': return  "1101";
+            case 'e': return  "1110";
+            case 'f': return  "1111";
+            default: return "X";
+        }
+    }
+
     
     static int HexCharToDec(char hexChar)
     {
