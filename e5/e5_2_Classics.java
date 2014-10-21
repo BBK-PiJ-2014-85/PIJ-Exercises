@@ -54,7 +54,9 @@ public class e5_2_Classics{
         //System.out.println(factorialIt(n));
         //System.out.println(factorialRec(n));
         
-        long timeStart, timeFinish;
+        System.out.println(hanoi(n));
+        
+   /*    long timeStart, timeFinish;
         
         timeStart = System.currentTimeMillis();
         System.out.println(fibonacciIt(n));
@@ -69,7 +71,7 @@ public class e5_2_Classics{
         timeStart = System.currentTimeMillis();
         System.out.println(fibonacciRecMem(n));
         timeFinish = System.currentTimeMillis();
-        System.out.println("Using the recursive method with memoization took " + (timeFinish - timeStart) + " milliseconds.");
+        System.out.println("Using the recursive method with memoization took " + (timeFinish - timeStart) + " milliseconds.");*/
     }
 
     public static int factorialRec(int n)
@@ -151,5 +153,18 @@ public class e5_2_Classics{
     }
 
     
+    static int hanoi(int n)
+    {
+        if (n==1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 1 + 2 * hanoi(n-1);
+        }
+        
+        
+    }
  
 }
