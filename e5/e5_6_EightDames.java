@@ -2,7 +2,7 @@
 ight Dames: “given a chess board, and knowing
 that the Dame can reach any tile horizontally, vertically, or diagonally
 , place 8 Dames on the board so that none
-of them can reach the others by doing only one move”. You can retu
+of them can reach the others by doing only one move". You can retu
 rn the solution as an array of 8x8 booleans
 where eight tiles are true (those with the Dames on them) and the ot
 hers are false.
@@ -21,35 +21,45 @@ static int numberOfSolutions=0;
 
     Point[] board = new Point[64];
     int col=0, row = 0;
-    
+
     for (int i=0; i<64; i++)
     {
     if (col > 7) {col=0; row++;}
-    
+
     board[i] = new Point(col, row);
     col++;
     }
-    
-    for (Point p1 : board)
+
+    for (int i0=0;i0<=7;i0++)
     {
-    for (Point p2 : board)
+        Point p0 = new Point(0,i0);
+
+    for (int i1=0;i1<=7;i1++)
     {
-    for (Point p3 : board)
+          Point p1 = new Point(1,i1);
+
+    for (int i2=0;i2<=7;i2++)
     {
-    for (Point p4 : board)
+          Point p2 = new Point(2,i2);
+    for (int i3=0;i3<=7;i3++)
     {
-    for (Point p5 : board)
+          Point p3 = new Point(3,i3);
+    for (int i4=0;i4<=7;i4++)
     {
-    for (Point p6 : board)
+          Point p4 = new Point(4,i4);
+    for (int i5=0;i5<=7;i5++)
     {
-    for (Point p7 : board)
+          Point p5 = new Point(5,i5);
+    for (int i6=0;i6<=7;i6++)
     {
-    for (Point p8 : board)
+          Point p6 = new Point(6,i6);
+    for (int i7=0;i7<=7;i7++)
     {
-    Point[] solution = new Point[] {p1,p2,p3,p4,p5,p6,p7,p8};
-    
+          Point p7 = new Point(7,i7);
+    Point[] solution = new Point[] {p0,p1,p2,p3,p4,p5,p6,p7};
+
     printIfValidSolution(solution);
-    
+
     }
     }
     }
@@ -59,12 +69,12 @@ static int numberOfSolutions=0;
     }
     }
 
-        
+
     }
-    
+
     static void printIfValidSolution(Point[] solution)
     {
-    
+
     if (isValidSolution(solution))
     {
     System.out.print("Solution " + (numberOfSolutions + 1) + ": ");
@@ -73,9 +83,9 @@ static int numberOfSolutions=0;
     {
     System.out.print("(" + piece.x + ", " + piece.y + ") ");
     }
-    
+
     System.out.println();
-    
+
     }
     }
 
@@ -102,7 +112,7 @@ static int numberOfSolutions=0;
                 {return false;}
             }
         }
-        
+
         return true;
     }
 
@@ -122,11 +132,11 @@ class Point{
     y=j;
     }
 
-    
+
     public boolean sameXorY(Point p)
     {
     return (x == p.x || y == p.y);
     }
-    
+
 
 }
