@@ -15,6 +15,8 @@ may take a long time).*/
 
 public class e5_6_EightDames{
 
+static int numberOfSolutions=0;
+
     public static void main (String[] args){
 
     Point[] board = new Point[64];
@@ -27,7 +29,7 @@ public class e5_6_EightDames{
     board[i] = new Point(col, row);
     col++;
     }
- 
+    
     for (Point p1 : board)
     {
     for (Point p2 : board)
@@ -44,7 +46,7 @@ public class e5_6_EightDames{
     {
     for (Point p8 : board)
     {
-    Point[] solution = new Point[] {p1,p2,p3,p4,p5,p6,p7,p8}
+    Point[] solution = new Point[] {p1,p2,p3,p4,p5,p6,p7,p8};
     
     printIfValidSolution(solution);
     
@@ -60,54 +62,32 @@ public class e5_6_EightDames{
         
     }
     
-    static printIfValidSolution(Point[] solution)
+    static void printIfValidSolution(Point[] solution)
     {
     
-    if (isValidSolution)
+    if (isValidSolution(solution))
     {
-    
-    for (piece : solution)
-    
+    System.out.print("Solution " + (numberOfSolutions + 1) + ": ");
+    numberOfSolutions++;
+    for (Point piece : solution)
+    {
     System.out.print("(" + piece.x + ", " + piece.y + ") ");
-    
     }
     
     System.out.println();
     
     }
+    }
 
     static boolean isValidSolution(Point[] solution)
     {
-        boolean isValid = true;
-        
-        // check columns are all different
-        
-        //check values are all unique
-        for (int i=0; i<7; i++)
-        {
-            for (int j=i+1; j <8; j++)
-            {
-                if (solutionSet[i] == solutionSet[j])
-                {return false;}
-            }
-        }
 
         //check columns and rows are all unique
         for (int i=0; i<7; i++)
         {
             for (int j=i+1; j <8; j++)
             {
-                if (solutionSet[i] % 8 == solutionSet[j] % 8)
-                {return false;}
-            }
-        }
-
-        // check rows are unique
-        for (int i=0; i<7; i++)
-        {
-            for (int j=i+1; j <8; j++)
-            {
-                if ( (int) solutionSet[i] / 8 == (int) solutionSet[j] / 8)
+                if (solution[i].sameXorY(solution[j]))
                 {return false;}
             }
         }
@@ -118,10 +98,7 @@ public class e5_6_EightDames{
         {
             for (int j=i+1; j <8; j++)
             {
-                int rowsDiff = Math.abs( ((int) solutionSet[i] / 8) - ((int) solutionSet[j] / 8));
-                int columnsDiff = Math.abs((solutionSet[i] % 8) - (solutionSet[j] % 8));
-            
-                if ( rowsDiff == columnsDiff)
+                if ( Math.abs(solution[i].x - solution[j].x) == Math.abs(solution[i].y - solution[j].y))
                 {return false;}
             }
         }
@@ -135,7 +112,7 @@ public class e5_6_EightDames{
 
 
 
-private class Point{
+class Point{
     public int x;
     public int y;
 
@@ -144,11 +121,7 @@ private class Point{
     x=i;
     y=j;
     }
-    
-    public boolean equals(Point p)
-    {
-    return (x == p.x && y == p.y);
-    }
+
     
     public boolean sameXorY(Point p)
     {
