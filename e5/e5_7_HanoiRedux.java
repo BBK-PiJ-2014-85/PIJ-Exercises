@@ -10,6 +10,21 @@ xchange
 n
 discs.*/
 
+/* Explanation of calculation
+
+The way this program calcualtes the anser is as follows.
+    - There are 3 stages:
+        - stacking all but the largest piece in the middle
+        - swapping the largest piece's side
+        - putting the pieces back on the right side
+
+The first and last points require the same amount of moves. I call this function "moves".
+
+When we start with 3, i.e. m(3), we have two pieces in the middle, and it takes 2 moves.
+    - for each extra piece we add, the moves required doubles + 1. 
+
+*/
+
 import java.util.Scanner;
 
 class e5_7_HanoiRedux{
