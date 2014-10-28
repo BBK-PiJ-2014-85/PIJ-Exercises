@@ -55,7 +55,7 @@ class Matrix
 // not pretty for 10 digit long integers, but then that isnt really the point of the exercise
     public void prettyPrint()
     {
-        for (int b=0; b < j; b++){
+        for (int b= j - 1; b >= 0; b--){
         for (int a=0; a < i; a++){
         
         System.out.print("\t" + mat[a][b]);
