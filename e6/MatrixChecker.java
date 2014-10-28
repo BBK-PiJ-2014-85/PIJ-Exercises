@@ -39,7 +39,7 @@ class MatrixChecker{
         int cols = matrix[0].length;
         
         for (int i=0; i < rows; i++)
-        for (int j=0; j < cols; i++)
+        for (int j=0; j < cols; j++)
         {
         {
             if ( j > i && matrix[i][j] != 0)
