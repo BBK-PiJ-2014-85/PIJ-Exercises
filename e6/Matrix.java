@@ -6,6 +6,7 @@ class Matrix
 {
     private int[][] mat;
     private int i=-1,j=-1;
+    private MatrixChecker check = new MatrixChecker();
 
     public Matrix(int a, int b)
     {
@@ -93,7 +94,16 @@ class Matrix
     
         return output;
     }
-
+    
+    public boolean isSymmetrical()
+    {
+        return check.isSymmetrical(mat);
+    }
+    
+    public boolean isTriangular()
+    {
+        return check.isTriangular(mat);
+    }
 
     private int countNum(String input)
     {
