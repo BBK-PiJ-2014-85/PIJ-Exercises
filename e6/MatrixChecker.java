@@ -3,9 +3,9 @@ class MatrixChecker{
 
     public boolean isSymmetrical(int[] array)
     {
-        for (int i=0; i <= (int) array.length(); i++)
+        for (int i=0; i <= (int) array.length; i++)
         {
-            if (array[i] != array[array.length() - i - 1])
+            if (array[i] != array[array.length - i - 1])
             {
                 return false;
             }
@@ -16,8 +16,8 @@ class MatrixChecker{
 
     public boolean isSymmetrical(int[][] matrix)
     {
-        int rows = matrix.length();
-        int cols = matrix[0].length();
+        int rows = matrix.length;
+        int cols = matrix[0].length;
         
         for (int i=0; i < rows; i++)
         for (int j=0; j < cols; i++)
@@ -35,8 +35,8 @@ class MatrixChecker{
     
     public boolean isTriangular(int[][] matrix)
     {
-        int rows = matrix.length();
-        int cols = matrix[0].length();
+        int rows = matrix.length;
+        int cols = matrix[0].length;
         
         for (int i=0; i < rows; i++)
         for (int j=0; j < cols; i++)
