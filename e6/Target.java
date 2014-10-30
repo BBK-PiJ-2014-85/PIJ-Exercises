@@ -32,13 +32,13 @@ public void init()
 public Result fire (int x, int y, int z)
 {
 
-    if (area[x][y][z] == 1)
-    {
-        return Result.HIT;
-    }
-    else if (x < 0 || y < 0 || z < 0 || x >= width || y >= width || z >= width)
+    if (x < 0 || y < 0 || z < 0 || x >= width || y >= width || z >= width)
     {
         return Result.OUT_OF_RANGE;
+    }
+    else if (area[x][y][z] == 1)
+    {
+        return Result.HIT;
     }
     else if (isOnGrid(area[x]))
     {
