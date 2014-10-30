@@ -14,7 +14,15 @@ public static void main (String[] args){
    
    e6_6_AntiAircraftAim program = new e6_6_AntiAircraftAim();
    
-   program.playGame(tar, kb);
+   boolean abort = false;
+   
+   while (!abort)
+   {
+    program.playGame(tar, kb);
+    System.out.print("Would you like to play again?");
+    if (!kb.next().equals("y")) {abort = true;}
+    }
+
 
 }
 
