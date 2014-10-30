@@ -17,8 +17,9 @@ public static void main (String[] args){
         if (c % 2 == 0)
         {
             System.out.print("Enter employee name: ");
+            if (c != 0) {nextName = kb.nextLine();} // nextInt doesnt take the new line part, so this removes it
             nextName = kb.nextLine();
-            if (nextName.equals("")) {abort = true;}
+            if (nextName.equals("")) {System.out.println("In here: " + nextName); abort = true;}
         }
         else
         {   System.out.print("Enter employe ID: ");
