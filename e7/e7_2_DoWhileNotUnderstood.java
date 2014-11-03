@@ -7,7 +7,9 @@ public class e7_2_DoWhileNotUnderstood{
     public static void main(String[] args){
     
         Scanner kb = new Scanner(System.in);
-       String input = kb.nextLine();
+      
+        System.out.println("Please input students marks:");
+        String input = kb.nextLine();
         
         int distinction=0, pass=0, fail=0, invalid = 0;
         String numString = "";
@@ -38,7 +40,7 @@ public class e7_2_DoWhileNotUnderstood{
         System.out.print(fail + " fails ");
         System.out.println(" (plus " + invalid + " invalid).");
     
-    
+        kb.close();
     }
 
 
