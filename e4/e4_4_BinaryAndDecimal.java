@@ -13,7 +13,7 @@
 //one does the opposite: takes a decimal number
 //and returns a binary number. The program should use the methods
 //defined.
-
+package e4;
 import java.util.Scanner;
 
 public class e4_4_BinaryAndDecimal{

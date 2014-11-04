@@ -9,7 +9,7 @@
 //}
 
 // TODO: Should return if some are the same distance to x decimal places (due to floating point)
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_12_DistancePointToPoint {

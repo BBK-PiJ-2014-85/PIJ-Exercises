@@ -1,4 +1,4 @@
-
+package e6;
 /*Create a new Java class called ArrayCopier with a method called
 copy
 that takes two arrays of integers as param-

@@ -1,5 +1,7 @@
-import java.util.Scanner;
 
+package e3;
+
+import java.util.Scanner;
 
 public class ex3_1_Calculator {
 

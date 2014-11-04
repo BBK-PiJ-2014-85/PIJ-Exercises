@@ -5,7 +5,7 @@
 //s the text “It was a dark and stormy night” the
 //program must output “It was a dark and stormy nightthgin ymrots
 //dna krad a saw tI”.
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_9_PalindromeCreator{

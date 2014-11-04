@@ -3,7 +3,7 @@
 // different line.
 // Now modify your program to write each word (as defined by spaces)
 // rather than letter on a different line
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_4_LineToColumn {

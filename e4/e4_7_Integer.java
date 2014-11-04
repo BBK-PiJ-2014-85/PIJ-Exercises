@@ -18,7 +18,7 @@ prettyPrint():
 prints the value of the integer on the screen.
 toString():
 returns a String equivalent to the number.*/
-
+package e4;
 import java.util.Scanner;
 
 public class e4_7_Integer{

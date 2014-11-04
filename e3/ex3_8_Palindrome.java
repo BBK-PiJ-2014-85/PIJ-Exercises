@@ -5,7 +5,7 @@
 //“radar”, “kayak”, and “step on no pets”.
 //Write a program that reads a text and detects whether the text is
 //a strict palindrome
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_8_Palindrome {

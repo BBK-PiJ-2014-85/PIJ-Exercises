@@ -10,7 +10,7 @@
 //ter and area of the rectangle.
 
 // Question, why does a class defineid withia class need to be static?
-
+package e3;
 import java.util.Scanner;
 
 
@@ -40,29 +40,3 @@ class ex3_13_Rectangle{
     }
 
   }
-
-class Rectangle {
-    Point upLeft;
-    Point downRight;
-    
-    public double getArea()
-    {
-        return Math.abs(upLeft.x - downRight.x) * Math.abs(upLeft.y - downRight.y);
-    }
-    
-    public double getPerimiter()
-    {
-        return 2 * (Math.abs(upLeft.x - downRight.x) + Math.abs(upLeft.y - downRight.y));
-    }
-    
-    public Rectangle(Point p1, Point p2)
-    {
-        upLeft = p1;
-        downRight = p2;
-    }
-    
-}
-
-class Point{
-    public double x,y;
-}

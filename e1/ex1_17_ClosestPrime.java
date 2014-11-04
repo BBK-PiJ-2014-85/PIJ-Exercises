@@ -1,3 +1,5 @@
+package e1;
+
 import java.util.Scanner;
 
 public class ex1_17_ClosestPrime {

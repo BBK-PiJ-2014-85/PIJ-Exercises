@@ -1,4 +1,4 @@
-
+package e6;
 
 class e6_3_CreatingMatrices{
 

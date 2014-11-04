@@ -5,7 +5,7 @@ StackOverflowError
 Use different methods, which different number and types of local va
 riables, and see how the number of maximum
 function calls changes.*/
-
+package e5;
 
 public class e5_8_HowBigIsYourStack{
 

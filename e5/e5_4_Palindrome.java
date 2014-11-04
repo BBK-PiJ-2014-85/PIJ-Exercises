@@ -4,7 +4,7 @@ palindrome and false otherwise. Compare this recursive version with
 the iterative version you wrote in past weeks.
 Which one seems clearer to you?*/
 
-
+package e5;
 public class e5_4_Palindrome{
 
     public static void main (String[] args)

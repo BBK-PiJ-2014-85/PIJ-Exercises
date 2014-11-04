@@ -7,6 +7,8 @@
 //ther the text is a relaxed palindrome. Note
 //that all strict palindromes are relaxed palindromes by definition
 
+package e3;
+
 import java.util.Scanner;
 
 public class ex3_10_PalindromeRedux{

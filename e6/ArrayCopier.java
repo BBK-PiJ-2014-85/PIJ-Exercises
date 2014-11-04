@@ -1,4 +1,4 @@
-
+package e6;
 class ArrayCopier{
 
 public void copy (int[] src, int[] dst)

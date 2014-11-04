@@ -37,7 +37,7 @@ e. If the user enters any other command,
 or types one of these commands at the wrong time (e.g. RCPT befor
 e MAIL), the program must say “Invalid
 command” on screen. See a simple example below */
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_16_MailServer{

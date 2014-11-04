@@ -12,7 +12,7 @@ may take a long time).*/
 
 //doesnt insist on a grid of booleans, i think it is easier to use an 8 x 8 grid defined by coordinates from
     //1 to 8 in each direction
-
+package e5;
 public class e5_6_EightDames{
 
 static int numberOfSolutions=0;
@@ -122,7 +122,7 @@ static int numberOfSolutions=0;
 
 
 
-class Point{
+ class Point{
     public int x;
     public int y;
 

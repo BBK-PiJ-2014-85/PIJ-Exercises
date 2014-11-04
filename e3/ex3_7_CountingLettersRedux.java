@@ -3,7 +3,7 @@
 //The program stops if the user asks for the same letter twice. This is
 //an example of the output of such a program
 //(with a rather short and boring text):
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_7_CountingLettersRedux {

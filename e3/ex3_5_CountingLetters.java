@@ -3,7 +3,7 @@
 // Then modify the program so that it reads the text from the user an
 // d then asks for a letter. The program should
 // then say how many times you can find the letter in the text.
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_5_CountingLetters {

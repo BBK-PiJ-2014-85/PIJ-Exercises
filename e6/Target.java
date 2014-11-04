@@ -1,4 +1,4 @@
-
+package e6;
 class Target{
 
     private int[][][] area;

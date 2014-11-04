@@ -1,3 +1,4 @@
+
 /*2.1 a) Factorial
 Write a small program with a method that calculates the factorial of
 an integer number as seen in the notes.
@@ -34,6 +35,9 @@ n
 Hanoi disks from the initial
 post to the last post.
 */
+
+package e5;
+
 import java.util.Scanner;
 import java.lang.System.*;
 import java.util.*;

@@ -1,3 +1,4 @@
+package e1;
 
 public class ex1_13_PrimesTo1000 {
     // Extra exercises number 1_13

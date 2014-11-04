@@ -11,7 +11,7 @@ calculates 2
 3
 .
 Is it easy to do this both iteratively and recursively? */
-
+package e5;
 public class e5_5_Power{
 
     public static void main (String[] args){

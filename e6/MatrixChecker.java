@@ -1,4 +1,4 @@
-
+package e6;
 class MatrixChecker{
 
     public boolean isSymmetrical(int[] array)

@@ -1,3 +1,6 @@
+
+package e1;
+
 import java.util.Scanner;
 
 public class ex1_18_Pi {

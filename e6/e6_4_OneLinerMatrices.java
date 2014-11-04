@@ -1,4 +1,4 @@
-
+package e6;
 class e6_4_OneLinerMatrices{
 
     public static void main(String[] args)

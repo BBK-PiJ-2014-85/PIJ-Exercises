@@ -1,4 +1,4 @@
-
+package e6;
 
 // really bad practice here using lots of i and j's at different levels - should improve this for clarity
 

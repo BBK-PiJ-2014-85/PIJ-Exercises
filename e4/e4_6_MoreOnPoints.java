@@ -25,7 +25,7 @@ heir parameters are different. This is
 called
 method overloading
 and we will see more of that in the future.*/
-
+package e4;
 import java.util.Scanner;
 
 public class e4_6_MoreOnPoints{

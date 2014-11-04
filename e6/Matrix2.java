@@ -1,4 +1,4 @@
-
+package e6;
 
 class Matrix2 extends Matrix{
 

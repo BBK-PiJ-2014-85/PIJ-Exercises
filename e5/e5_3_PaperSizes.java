@@ -14,7 +14,7 @@ e (e.g. ”A4”, “A00000”) and prints on screen
 the size of the corresponding sheet of paper. For simplicity, you ca
 n ignore rounding errors when calculating smaller
 sizes. */
-
+package e5;
 public class e5_3_PaperSizes{
 
     public static void main (String[] args){

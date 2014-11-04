@@ -1,4 +1,4 @@
-
+package e6;
 import java.util.Scanner;
 
 class e6_7_BigEnough{

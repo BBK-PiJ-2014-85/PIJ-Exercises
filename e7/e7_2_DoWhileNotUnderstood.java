@@ -1,4 +1,4 @@
-
+package e7;
 import java.util.Scanner;
 
 
@@ -27,7 +27,7 @@ public class e7_2_DoWhileNotUnderstood{
                 else if (num <= 69) pass++;
                 else distinction++;
                 
-                System.out.println("Input a mark: " + num);
+                System.out.println("Input a mark: " + num); 
                 numString="";
             }
             else if (i != input.length()) numString += input.charAt(i);

@@ -3,7 +3,7 @@
 // operands, and then execute it. For example, if the user enters “3
 // /5” the program outputs “0.6”; if the user
 // enters “23 * 4” the program outputs “92”.
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_2_CommandLineCalculator{

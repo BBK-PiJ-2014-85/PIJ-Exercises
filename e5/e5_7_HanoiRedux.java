@@ -24,7 +24,7 @@ When we start with 3, i.e. m(3), we have two pieces in the middle, and it takes 
     - for each extra piece we add, the moves required doubles + 1. 
 
 */
-
+package e5;
 import java.util.Scanner;
 
 class e5_7_HanoiRedux{
@@ -66,4 +66,11 @@ static int move(int n)
 }
 
 
+}
+
+class testMe{
+
+	int test1;
+	String test2;
+	public testMe (int a, int b) {}
 }

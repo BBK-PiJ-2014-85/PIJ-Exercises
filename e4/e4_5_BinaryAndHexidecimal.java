@@ -17,7 +17,7 @@ hexadecimal number (starting by “0x”).
 Your program must recognise the number as what it is and convert it
 to the other base. Use two methods for
 conversion as in the former exercise.*/
-
+package e4;
 import java.util.Scanner;
 
 public class e4_5_BinaryAndHexidecimal {

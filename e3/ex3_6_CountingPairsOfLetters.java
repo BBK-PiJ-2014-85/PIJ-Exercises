@@ -5,7 +5,7 @@
 // charAt()
 // and
 // length()
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_6_CountingPairsOfLetters{

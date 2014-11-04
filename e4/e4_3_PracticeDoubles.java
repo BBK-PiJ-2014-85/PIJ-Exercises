@@ -4,7 +4,7 @@
 //back, and the interest rate (in this exercise, we assume it is a fixed r
 //ate). The program can then calculate how
 //much must be paid at the end
-
+package e4;
 import java.util.Scanner;
 
 public class e4_3_PracticeDoubles{

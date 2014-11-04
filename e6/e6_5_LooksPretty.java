@@ -1,4 +1,4 @@
-
+package e6;
 class e6_5_LooksPretty{
 
     public static void main (String[] args)

@@ -7,7 +7,7 @@
 // ASK: Best ways of dealing with floating arithmetic and the double being a little out
 // BUG: Has big floating point issues
 
-
+package e3;
 import java.util.Scanner;
 
 public class ex3_3_YourChangePlease {

@@ -1,4 +1,4 @@
-/*Create a Java class called
+package e6;/*Create a Java class called
 Calculator
 . The class should implement the following methods, each of them print
 ing

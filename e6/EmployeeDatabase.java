@@ -1,4 +1,4 @@
-
+package e6;
 class EmployeeDatabase{
 
 private String[] names;
