@@ -26,4 +26,25 @@ public class LinkedList {
 		if (firstItem != null && firstItem.getName().equals(name)) firstItem = firstItem.getNextItem();
 	}
 	
+	public int itemCount()
+	{
+		if (firstItem == null) return 0;
+		else return firstItem.restCount();
+		
+	}
+	
+	public int itemCountIterative()
+	{
+		int count = 0;
+		ListItem item = firstItem;
+		while (item != null)
+		{
+			count++;
+			item = item.getNextItem();
+		}
+		
+		return count;
+		
+	}
+	
 }

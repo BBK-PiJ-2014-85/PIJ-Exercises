@@ -39,6 +39,13 @@ public class ListItem {
 		if (nextItem != null) nextItem.delete(name);
 	}
 	
+	public int restCount()
+	{
+		if (nextItem == null) return 1;
+		else return 1 + nextItem.restCount();
+	}
+	
+	
 	public String getName() {return itemName;}
 	public int getNumber() {return number;}
 	public void setName(String name) {itemName = name;}
