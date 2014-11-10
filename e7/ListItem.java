@@ -51,6 +51,7 @@ public class ListItem {
 	public void setName(String name) {itemName = name;}
 	public void setNumber(int number) {this.number = number;}
 	public ListItem getNextItem() {return nextItem;}
+	public void setNextItem(ListItem item) {nextItem = item;}
 	
 
 }
