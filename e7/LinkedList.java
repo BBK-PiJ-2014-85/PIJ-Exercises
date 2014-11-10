@@ -18,6 +18,7 @@ public class LinkedList {
 	public void printList()
 	{
 		if (firstItem != null) firstItem.printList();
+		else System.out.println("List is null");
 	}
 	
 	public void deleteItem(String name)
@@ -47,4 +48,6 @@ public class LinkedList {
 		
 	}
 	
+	//public void setFirstItem(DoubleListItem item) {firstItem = item;}
+	public ListItem getFirstItem() {return firstItem;}
 }
