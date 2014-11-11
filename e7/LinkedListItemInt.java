@@ -3,6 +3,7 @@ package e7;
 public class LinkedListItemInt {
 	private int num;
 	private LinkedListItemInt nextItem = null;
+	private LinkedListItemInt previousItem = null;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,26 +15,17 @@ public class LinkedListItemInt {
 		num = number;
 	}
 	
-	public void addItem(LinkedListItemInt item)
+	public void setPreviousItem(LinkedListItemInt item)
 	{
-		if (nextItem == null) nextItem = item;
-		else nextItem.addItem(item);
+		previousItem = item;
 	}
+	
+	public LinkedListItemInt getPreviousItem() {return previousItem;}
 	
 	public void printList()
 	{
 		System.out.println(num);
 		if (nextItem != null) nextItem.printList();
-	}
-	
-	public void delete(int number)
-	{
-		if (nextItem != null && nextItem.getNum() == number)
-		{
-			nextItem = nextItem.getNextItem();
-		}
-		
-		if (nextItem != null) nextItem.delete(number);
 	}
 	
 	public int getNum() {return num;}
@@ -43,6 +35,7 @@ public class LinkedListItemInt {
 		if (nextItem == null) return 1;
 		else return 1 + nextItem.restCount();
 	}
+	
 	
 	
 	public void setNum(int number) {num = number;}

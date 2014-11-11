@@ -6,8 +6,20 @@ public class LinkedListInt {
 
 	public void addItem(LinkedListItemInt item)
 	{
-		if (firstItem == null) firstItem = item;
-		else firstItem.addItem(item);
+		LinkedListItemInt current = firstItem;
+		
+		if (firstItem == null)  firstItem = item;
+		else
+		{
+		while (current.getNextItem() != null)
+		{
+		
+			current = current.getNextItem();
+		}
+		current.setNextItem(item);
+		item.setPreviousItem(current);
+		
+		}
 	}
 	
 	public void addItem(int number)
@@ -24,8 +36,25 @@ public class LinkedListInt {
 	
 	public void deleteItem(int number)
 	{
-		if (firstItem != null) firstItem.delete(number);
-		if (firstItem != null && firstItem.getNum() == number) firstItem = firstItem.getNextItem();
+		if (firstItem != null)
+		{
+			LinkedListItemInt current = firstItem;
+			while (current != null)
+			{
+				if (current.getNum() == number && current.getPreviousItem() != null) 
+				{
+					current.getPreviousItem().setNextItem(current.getNextItem());
+					if (current.getNextItem() != null) current.getNextItem().setPreviousItem(current.getPreviousItem());
+				}
+				current = current.getNextItem();
+			}
+		}
+		
+		if (firstItem != null && firstItem.getNum() == number) 
+		{
+			firstItem = firstItem.getNextItem();
+			firstItem.setPreviousItem(null);
+		}
 	}
 	
 	public int itemCount()
