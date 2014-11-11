@@ -10,6 +10,26 @@ public class LinkedListInt {
 		sorted = sort;
 	}
 	
+	public LinkedListInt() {}
+	
+	public void addItem(LinkedListInt addList)
+	{
+		if (addList.getFirstItem() != null)
+		{
+			LinkedListItemInt current = firstItem;
+			if (firstItem == null)  firstItem = addList.getFirstItem();
+			else
+			{
+				while (current.getNextItem() != null)
+				{
+					current = current.getNextItem();
+				}
+			current.setNextItem(addList.getFirstItem());
+			current.getNextItem().setPreviousItem(current);
+			}
+		}
+	}
+	
 	public void addItem(LinkedListItemInt item)
 	{
 		if (!sorted)
@@ -117,6 +137,7 @@ public class LinkedListInt {
 		return count;
 		
 	}
+	
 	
 	//public void setFirstItem(DoubleListItem item) {firstItem = item;}
 	public LinkedListItemInt getFirstItem() {return firstItem;}
