@@ -11,6 +11,8 @@ public class e7_9_ArrayToList {
 		System.out.println("There are " + list.count() + " entries in the list.");
 		list.print();
 		
+		System.out.println("");
+		
 		list.add(new int[] {10, 1});
 		list.print();
 
