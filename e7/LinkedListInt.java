@@ -3,22 +3,62 @@ package e7;
 public class LinkedListInt {
 
 	private LinkedListItemInt firstItem = null;
-
+	private boolean sorted = false;
+	
+	public LinkedListInt (boolean sort)
+	{
+		sorted = sort;
+	}
+	
 	public void addItem(LinkedListItemInt item)
 	{
-		LinkedListItemInt current = firstItem;
-		
-		if (firstItem == null)  firstItem = item;
+		if (!sorted)
+		{
+			LinkedListItemInt current = firstItem;
+			
+			if (firstItem == null)  firstItem = item;
+			else
+			{
+				while (current.getNextItem() != null)
+				{
+					current = current.getNextItem();
+				}
+			current.setNextItem(item);
+			item.setPreviousItem(current);
+			}
+		}
 		else
 		{
-		while (current.getNextItem() != null)
-		{
-		
-			current = current.getNextItem();
-		}
-		current.setNextItem(item);
-		item.setPreviousItem(current);
-		
+			LinkedListItemInt current = firstItem;
+			
+			if (firstItem == null)  firstItem = item;
+			else if (firstItem.getNum() > item.getNum())
+			{
+				LinkedListItemInt temp = new LinkedListItemInt(firstItem.getNum());
+				firstItem.setNum(item.getNum());
+				addItem(temp);
+			}
+			else
+			{
+				while (current.getNextItem() != null && current.getNextItem().getNum() < item.getNum())
+				{
+					current = current.getNextItem();
+				}
+				
+				if (current.getNextItem() == null)
+				{
+					current.setNextItem(item);
+					item.setPreviousItem(current);
+				}
+				else
+				{
+					item.setPreviousItem(current);
+					item.setNextItem(current.getNextItem());
+					current.setNextItem(item);
+					item.getNextItem().setPreviousItem(item);
+				}
+			}
+			
 		}
 	}
 	
