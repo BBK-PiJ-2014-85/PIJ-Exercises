@@ -2,7 +2,17 @@ package e7;
 
 public class ListUtilities {
 
-	private static LinkedListInt list= new LinkedListInt();
+	private static LinkedListInt list= null;
+	
+	public ListUtilities()
+	{
+		if (list == null) list = new LinkedListInt(false);
+	}
+	
+	public ListUtilities(boolean sorted)
+	{
+		if (list == null) list = new LinkedListInt(sorted);
+	}
 	
 	public void add(int[] input)
 	{
@@ -26,5 +36,7 @@ public class ListUtilities {
 	{
 		return list.itemCount();
 	}
+	
+	
 	
 }
