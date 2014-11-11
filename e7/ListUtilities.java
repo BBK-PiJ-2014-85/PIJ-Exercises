@@ -38,6 +38,8 @@ public class ListUtilities {
 	
 	public static LinkedListInt bubbleSort(LinkedListInt input)
 	{
+		list = input;
+		
 		boolean moved = true;
 		while (moved)
 		{
@@ -57,6 +59,53 @@ public class ListUtilities {
 		}
 		
 		return list;
+	}
+	
+	public static LinkedListInt cocktailSort(LinkedListInt input)
+	{
+		list = input;
+		
+		boolean moved = true, forwards=true;
+		LinkedListItemInt current = list.getFirstItem();
+		
+		while (moved)
+		{
+			if (forwards)
+			{
+				moved = false;
+				while (current.getNextItem() != null)
+				{
+					if (current.getNum() > current.getNextItem().getNum())
+					{
+						int tempNum = current.getNum();
+						current.setNum(current.getNextItem().getNum());
+						current.getNextItem().setNum(tempNum);
+						moved = true;
+					}
+					current = current.getNextItem();
+				}
+				forwards = false;
+			}
+			else
+			{
+				moved = false;
+				while (current.getPreviousItem() != null)
+				{
+					if (current.getNum() < current.getPreviousItem().getNum())
+					{
+						int tempNum = current.getNum();
+						current.setNum(current.getPreviousItem().getNum());
+						current.getPreviousItem().setNum(tempNum);
+						moved = true;
+					}
+					current = current.getPreviousItem();
+				}
+				forwards = true;
+			}
+		}
+		
+		return list;
+		
 	}
 	
 	public void print()
