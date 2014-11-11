@@ -4,6 +4,42 @@ public class ListUtilities {
 
 	private static LinkedListInt list= null;
 	
+	public static LinkedListInt quickSort(LinkedListInt input)
+	{
+		if (input.getFirstItem().getNextItem() == null)
+		{
+			return input;
+		}
+		else if (input.getFirstItem().getNextItem().getNextItem() == null)
+		{
+			return ListUtilities.bubbleSort(input);
+		}
+		else
+		{
+			LinkedListInt listLower = new LinkedListInt();
+			LinkedListInt listHigher = new LinkedListInt();
+			
+			int compareValue = input.getFirstItem().getNum();
+			LinkedListItemInt current = input.getFirstItem().getNextItem();
+			while (current != null)
+			{
+				if (current.getNum() < compareValue) listLower.addItem(current);
+				else listHigher.addItem(current);
+				
+				current = current.getNextItem();
+			}
+			
+			listLower = ListUtilities.quickSort(listLower); 
+			listHigher = ListUtilities.quickSort(listHigher);
+			
+			listLower.addItem(input.getFirstItem());
+			listLower.addItem(listHigher);
+
+			return listLower; 
+		}
+	}
+	
+	
 	public ListUtilities()
 	{
 		if (list == null) list = new LinkedListInt(false);
