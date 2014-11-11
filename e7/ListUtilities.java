@@ -14,12 +14,49 @@ public class ListUtilities {
 		if (list == null) list = new LinkedListInt(sorted);
 	}
 	
-	public void add(int[] input)
+	public static void setListUtilities(int[] inputArray)
+	{
+		list = new LinkedListInt(false);
+		add(inputArray);
+	}
+	
+	public static LinkedListInt createList(int[] inputArray)
+	{
+		list = new LinkedListInt(false);
+		add(inputArray);
+		return list;
+	}
+	
+	public static void add(int[] input)
 	{
 		for (int i : input)
 		{
 			list.addItem(i);
 		}
+	}
+	
+	
+	public static LinkedListInt bubbleSort(LinkedListInt input)
+	{
+		boolean moved = true;
+		while (moved)
+		{
+			moved = false;
+			LinkedListItemInt current = list.getFirstItem();
+			while (current.getNextItem() != null)
+			{
+				if (current.getNum() > current.getNextItem().getNum())
+				{
+					int tempNum = current.getNum();
+					current.setNum(current.getNextItem().getNum());
+					current.getNextItem().setNum(tempNum);
+					moved = true;
+				}
+				current = current.getNextItem();
+			}
+		}
+		
+		return list;
 	}
 	
 	public void print()
