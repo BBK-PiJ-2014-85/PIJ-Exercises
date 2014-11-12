@@ -3,10 +3,11 @@ package e7;
 public class ListUtilities {
 
 	private static LinkedListInt list= null;
+
 	
 	public static LinkedListInt quickSort(LinkedListInt input)
 	{
-		if (input.getFirstItem().getNextItem() == null)
+		if (input.getFirstItem() == null || input.getFirstItem().getNextItem() == null)
 		{
 			return input;
 		}
@@ -23,17 +24,19 @@ public class ListUtilities {
 			LinkedListItemInt current = input.getFirstItem().getNextItem();
 			while (current != null)
 			{
-				if (current.getNum() < compareValue) listLower.addItem(current);
-				else listHigher.addItem(current);
+				if (current.getNum() < compareValue) listLower.addItem(current.getNum());
+				else listHigher.addItem(current.getNum());
 				
 				current = current.getNextItem();
 			}
+
 			
 			listLower = ListUtilities.quickSort(listLower); 
 			listHigher = ListUtilities.quickSort(listHigher);
 			
-			listLower.addItem(input.getFirstItem());
+			listLower.addItem(input.getFirstItem().getNum());
 			listLower.addItem(listHigher);
+
 
 			return listLower; 
 		}
