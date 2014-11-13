@@ -18,8 +18,7 @@ public class e7_13_quicksort {
 		ListUtilities.cocktailSort(list1);
 		Long finish1 = System.currentTimeMillis();
 		System.out.println("Sorting the list took " + (finish1 - start1) + " milliseconds");
-		list1.printList();
-		
+
 		
 		LinkedListInt list2 = ListUtilities.createList(bigArray);
 		Long start2 = System.currentTimeMillis();
@@ -38,8 +37,8 @@ public class e7_13_quicksort {
 		ListUtilities.cocktailSort(list4);
 		Long finish4 = System.currentTimeMillis();
 		System.out.println("Sorting the list took " + (finish4 - start4) + " milliseconds");
-
-		//Quicksort is slower....:( Maybe I have done something wrong, or maybe it needs more 
+		
+		/* something funny is going on as the thirs and fouth run is always quicker tha nthe 1st and 2nd*/
 		
 	}
 

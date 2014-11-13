@@ -6,11 +6,11 @@ public class e7_12_cocktailSort {
 
 	public static void main(String[] args) {
 		
-		int[] bigArray = new int[20000];
+		int[] bigArray = new int[1000];
 		Random ran = new Random();
-		for (int i : bigArray)
+		for (int i = 0; i < bigArray.length; i++)
 		{
-			i = ran.nextInt();
+			bigArray[i] = ran.nextInt(1000);
 		}
 		
 		LinkedListInt list1 = ListUtilities.createList(bigArray);
@@ -28,13 +28,13 @@ public class e7_12_cocktailSort {
 		
 		LinkedListInt list3 = ListUtilities.createList(bigArray);
 		Long start3 = System.currentTimeMillis();
-		ListUtilities.cocktailSort(list2);
+		ListUtilities.cocktailSort(list3);
 		Long finish3 = System.currentTimeMillis();
 		System.out.println("Sorting the list took " + (finish3 - start3) + " milliseconds");
 
 		LinkedListInt list4 = ListUtilities.createList(bigArray);
 		Long start4 = System.currentTimeMillis();
-		ListUtilities.bubbleSort(list1);
+		ListUtilities.bubbleSort(list4);
 		Long finish4 = System.currentTimeMillis();
 		System.out.println("Sorting the list took " + (finish4 - start4) + " milliseconds");
 		
