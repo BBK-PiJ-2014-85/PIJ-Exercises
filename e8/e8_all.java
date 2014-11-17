@@ -1,6 +1,6 @@
 package e8;
 
-public class e8_1_SupermarketQueue {
+public class e8_all {
 
 
 	
@@ -13,6 +13,13 @@ public class e8_1_SupermarketQueue {
 		myQueue.insert(new Person("Helder",76));
 		System.out.println(myQueue.retrieve().getName());
 		System.out.println(myQueue.retrieve().getName());
+		
+		System.out.println("Exercise 4.1: unfair queues:");
+		PersonQueue myQueue4_1 = new SimpleUnfairQueue_4_1();
+		myQueue4_1.insert(new Person("Hilda",34));
+		myQueue4_1.insert(new Person("Helder",76));
+		System.out.println(myQueue4_1.retrieve().getName());
+		System.out.println(myQueue4_1.retrieve().getName());
 		
 	}
 
