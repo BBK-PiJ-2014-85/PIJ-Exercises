@@ -21,6 +21,16 @@ public class e8_all {
 		System.out.println(myQueue4_1.retrieve().getName());
 		System.out.println(myQueue4_1.retrieve().getName());
 		
+		System.out.println("Exercise 4.2: Clustered Queues");
+		PersonQueue myQueue4_2 = new ClusteredQueue();
+		myQueue4_2.insert(new Person("Tom", 25));
+		myQueue4_2.insert(new Person("Dick", 26));
+		myQueue4_2.insert(new Person("Harry", 66));
+		myQueue4_2.insert(new Person("Fred", 5));
+		System.out.println(myQueue4_2.retrieve().getName());
+		System.out.println(myQueue4_2.retrieve().getName());
+		System.out.println(myQueue4_2.retrieve().getName());
+		System.out.println(myQueue4_2.retrieve().getName());
 	}
 
 
