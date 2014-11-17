@@ -46,8 +46,27 @@ public class e8_all {
 		map.put(13, "Lucky for all");
 		map.put(1000000, "Lucky for those with this salary");
 		map.remove(5);
-		System.out.println(map.get(55));
+		System.out.println(map.get(5));
 		System.out.println(map.get(13));
+
+		System.out.println("\n Exercise 5.3: HashTable:");
+		SimpleMap2 ht = new HashTable();
+		ht.put(7, "Lucky for some");
+		ht.put(5, "Lucky for someone?");
+		ht.put(13, "Unlucky for some");
+		ht.put(13, "Lucky for all");
+		ht.put(1000000, "Lucky for those with this salary");
+		ht.remove(5,"Lucky for someone?");
+		
+		for (String s: ht.get(5))
+		{
+			System.out.println(s);
+		}
+
+		for (String s: ht.get(13))
+		{
+			System.out.println(s);
+		}
 
 		
 	}
