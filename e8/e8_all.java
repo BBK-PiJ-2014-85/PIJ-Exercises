@@ -31,6 +31,25 @@ public class e8_all {
 		System.out.println(myQueue4_2.retrieve().getName());
 		System.out.println(myQueue4_2.retrieve().getName());
 		System.out.println(myQueue4_2.retrieve().getName());
+		
+		
+		System.out.println("\n Exercise 5.1: Hash tables:");
+		System.out.println(HashUtilities.shortHash(-456779372));
+		String str = "Going to an int";
+		System.out.println(HashUtilities.shortHash(str.hashCode()));
+		
+		System.out.println("\n Exercise 5.2: SimpleMap:");
+		SimpleMap map = new MySimpleMap();
+		map.put(7, "Lucky for some");
+		map.put(5, "Luckyt ofor someone?");
+		map.put(13, "Unlucky for some");
+		map.put(13, "Lucky for all");
+		map.put(1000000, "Lucky for those with this salary");
+		map.remove(5);
+		System.out.println(map.get(55));
+		System.out.println(map.get(13));
+
+		
 	}
 
 
