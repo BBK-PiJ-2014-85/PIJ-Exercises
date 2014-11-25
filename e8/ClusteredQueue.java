@@ -3,7 +3,7 @@ package e8;
 public class ClusteredQueue implements PersonQueue{
 
 	Person firstPerson;
-	
+
 	@Override
 	public void insert(Person person) {
 		// TODO Auto-generated method stub
