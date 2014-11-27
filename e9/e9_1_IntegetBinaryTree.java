@@ -22,7 +22,11 @@ public class e9_1_IntegetBinaryTree {
 	System.out.println("Exercise 1.3:");
 	System.out.println(tree.depth());
 	
-	System.out.println("Exercise 1.4 still to be completed");
+	System.out.println("Exercise 1.4:");
+	tree.add(7);
+	tree.delete(7);
+	System.out.println(tree.toString());
+	
 	System.out.println("Exercise 1.5 still to be completed");
 	
 	}
