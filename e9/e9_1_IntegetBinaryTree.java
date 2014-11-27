@@ -15,6 +15,15 @@ public class e9_1_IntegetBinaryTree {
 	System.out.println("Minimum is " + tree.getMin());
 	System.out.println("Maximum is " + tree.getMax());
 	
+	System.out.println("Exercise 1.2:");
+	System.out.println(tree.toString());
+	System.out.println(tree.toStringSimple());
+	
+	System.out.println("Exercise 1.3:");
+	System.out.println(tree.depth());
+	
+	System.out.println("Exercise 1.4 still to be completed");
+	System.out.println("Exercise 1.5 still to be completed");
 	
 	}
 
