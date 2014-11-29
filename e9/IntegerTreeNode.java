@@ -1,5 +1,6 @@
 package e9;
 
+
 public class IntegerTreeNode {
 	int value;
 	IntegerTreeNode right;
@@ -102,7 +103,13 @@ public class IntegerTreeNode {
 	
 	
 	public void add(int newNumber) {
-		if (newNumber > this.value) {
+		
+		if (isNull)
+		{
+			value = newNumber;
+			isNull = false;
+		}
+		else if (newNumber > this.value) {
 		if (right == null) {
 		right = new IntegerTreeNode(newNumber);
 		} else {
@@ -118,7 +125,9 @@ public class IntegerTreeNode {
 		}
 	
 	public boolean contains(int n) {
-		if (n == this.value) {
+		
+		if (isNull) return false;
+		else if (n == this.value) {
 		return true;
 		} else if (n > this.value) {
 		if (right == null) {
@@ -137,39 +146,47 @@ public class IntegerTreeNode {
 	
 	public int getMax()
 	{
-		if (right == null) return value;
+		if (isNull)
+		{
+			System.out.println("Tree has no entries, max 0 returned");
+			return 0;
+		}
+		else if (right == null) return value;
 		else return right.getMax();
 	}
 	
 	public  int getMin()
 	{
-		if (left == null) return value;
+		if (isNull)
+		{
+			System.out.println("Tree has no entries, min 0 returned");
+			return 0;
+		}
+		else if (left == null) return value;
 		else return left.getMin();
 	}
 	
 	public int depth()
 	{
-		if (left == null && right == null) return 0;
+		if (isNull)
+		{
+			System.out.println("Warning, tree has no entries. -1 returned");
+			return -1;
+		}
+		else if (left == null && right == null) return 0;
 		else return Math.max( (left != null ? left.depth() + 1: 0),(right != null ? right.depth() + 1: 0)  );
 	}
 	
-	public void delete()
-	{
-		//TODO
-	}
-	
-	public void rebalance()
-	{
-		//TODO
-	}
 	
 	public String toString()
 	{	
+		if (isNull) return "Tree has no nodes";
 		return "[" + value + " L" + (left==null? "[]" : left.toString()) + " R" + (right==null? "[]" : right.toString()) + "]";
 	}
 	
 	public String toStringSimple()
 	{
+		if (isNull) return "Tree has no nodes";
 		return "[" + value + (left != null? " " + left.toStringSimple():"") + (right != null? " " + right.toStringSimple():"") + "]";
 	}
 	
