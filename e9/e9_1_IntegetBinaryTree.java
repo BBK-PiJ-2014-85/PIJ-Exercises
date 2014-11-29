@@ -27,6 +27,12 @@ public class e9_1_IntegetBinaryTree {
 	tree.delete(7);
 	System.out.println(tree.toString());
 	
+	IntegerTreeNode tree2 = new IntegerTreeNode(1);
+	tree2.delete(1);
+	System.out.println(tree2.toString());
+	tree2.add(12);
+	System.out.println(tree2.toString());
+	
 	System.out.println("Exercise 1.5 still to be completed");
 	
 	}
