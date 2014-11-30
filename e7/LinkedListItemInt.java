@@ -36,6 +36,12 @@ public class LinkedListItemInt {
 		else return 1 + nextItem.restCount();
 	}
 	
+	public int getNthItem(int currentNum) //added for exercise in week 9
+	{
+		if (currentNum ==0) return num;
+		else return nextItem.getNthItem((currentNum-1));
+	}
+	
 	
 	
 	public void setNum(int number) {num = number;}

@@ -162,6 +162,9 @@ public class ListUtilities {
 		return list.itemCount();
 	}
 	
-	
+	public static int getNthItem(int itemNum)
+	{
+		return list.getNthItem(itemNum);
+	}
 	
 }

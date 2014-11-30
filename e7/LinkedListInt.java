@@ -138,6 +138,12 @@ public class LinkedListInt {
 		
 	}
 	
+	public int getNthItem(int itemNum)
+	{
+		if (firstItem != null) return firstItem.getNthItem(itemNum);
+		else return 0;
+	}
+	
 	
 	//public void setFirstItem(DoubleListItem item) {firstItem = item;}
 	public LinkedListItemInt getFirstItem() {return firstItem;}
