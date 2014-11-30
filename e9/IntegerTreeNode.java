@@ -1,5 +1,7 @@
 package e9;
 
+import e7.ListUtilities;
+
 
 public class IntegerTreeNode {
 	int value;
@@ -98,8 +100,50 @@ public class IntegerTreeNode {
 	
 	public void reBalance()
 	{
+		if (isNull) System.out.println("Tree is empty so there is nothing to rebalance");
+		else
+		{
+		ListUtilities list = new ListUtilities(true); // add all values to a sorted list
+		addToList();
+		int count = list.count();
 		
+		left=null;
+		right=null;
+		isNull = true;
+
+		getNextBalancedItem(0,count - 1);
+		}
+	}		
+	
+	private void getNextBalancedItem(int low, int high)
+	{
+		if (high == low) add(ListUtilities.getNthItem(high));
+		else if (high - low == 1)
+		{
+			add(ListUtilities.getNthItem(high));
+			add(ListUtilities.getNthItem(low));
+		}
+		else
+		{
+			int median = low + (int) ((high - low) / 2);
+			add(ListUtilities.getNthItem(median));
+			getNextBalancedItem(low,median - 1);
+			getNextBalancedItem(median + 1, high);			
+		}
 	}
+	
+		private void addToList()
+		{
+			ListUtilities.add( new int[] {value});
+			if (left != null) left.addToList();
+			if (right != null) right.addToList();
+		}
+		
+	
+		private int count()
+		{
+			return 1 + (left != null ? left.count(): 0) + (left != null ? left.count(): 0); 
+		}
 	
 	
 	public void add(int newNumber) {
