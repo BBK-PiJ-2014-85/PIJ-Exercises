@@ -33,7 +33,12 @@ public class e9_1_IntegetBinaryTree {
 	tree2.add(12);
 	System.out.println(tree2.toString());
 	
-	System.out.println("Exercise 1.5 still to be completed");
+	System.out.println("Exercise 1.5:");
+	IntegerTreeNode tree3 = new IntegerTreeNode(1);
+	for (int i = 2; i < 50; i++) tree3.add(i);
+	tree3.reBalance();
+	System.out.println(tree3.toString());
+	
 	
 	}
 
