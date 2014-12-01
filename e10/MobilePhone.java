@@ -9,6 +9,12 @@ public class MobilePhone extends OldPhone {
 	
 	@Override
 	public void call(String number)
+	{	
+		updateCallList(number);
+		super.call(number);
+	}
+	
+	protected void updateCallList(String number)
 	{
 		for (int i = 0; i < 9; i++)
 		{
@@ -16,8 +22,6 @@ public class MobilePhone extends OldPhone {
 		}
 		
 		lastCalls[0] = number;
-		
-		super.call(number);
 	}
 	
 	public void printLastNumbers()
