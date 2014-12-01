@@ -18,11 +18,12 @@ public class PhoneLauncher {
 		sp.call("121238");
 		sp.call("123345232");
 		sp.call("123456723232328");
+		sp.call("0012345");
 		
 		sp.printLastNumbers();
 		sp.findPosition();
 		sp.browseWeb("www.javahelp.com");
 		sp.playGame("Minesweeper");
-		sp.ringAlarm();
+		sp.ringAlarm();	
 	}
 }
