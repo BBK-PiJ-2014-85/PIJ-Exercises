@@ -6,7 +6,7 @@ public class PhoneLauncher {
 		launcher.launch();
 	}
 	public void launch() {
-		SmartPhone sp = new SmartPhone();
+		SmartPhone sp = new SmartPhone("Nokia");
 		
 		sp.call("12345678");
 		sp.call("1234345667784");
@@ -25,5 +25,10 @@ public class PhoneLauncher {
 		sp.browseWeb("www.javahelp.com");
 		sp.playGame("Minesweeper");
 		sp.ringAlarm();	
+		System.out.println(sp.getBrand());
+		
+		//TODO exercise 4.1 - not sure how you can gain visibility of it without creating a class and 
+			//passing it in or rewriting method. neither of these seem minor so is there something else?
+		//TODO exercise 4.2 - I dont think this is possible
 	}
 }
