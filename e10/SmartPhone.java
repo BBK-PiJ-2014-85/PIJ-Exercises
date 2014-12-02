@@ -2,6 +2,17 @@ package e10;
 
 public class SmartPhone extends MobilePhone {
 	
+	public SmartPhone(String brand) {
+		super(brand);
+	}
+
+	//@Override
+	//public void playGame(String input)
+	//{
+		
+	//}
+	
+	
 	public void browseWeb(String webpage)
 	{
 		System.out.println("Browsing page " + webpage);

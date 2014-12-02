@@ -2,6 +2,10 @@ package e10;
 
 public class MobilePhone extends OldPhone {
 
+	public MobilePhone(String brand) {
+		super(brand);
+	}
+
 	private String[] lastCalls = new String[10];
 	
 	public void ringAlarm() {System.out.println ("Get up!");}
