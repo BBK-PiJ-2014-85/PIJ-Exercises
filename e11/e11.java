@@ -61,7 +61,18 @@ public class e11 {
 		System.out.println("To be completed");
 		
 		System.out.println("\nExercise 5:");
-		System.out.println("To be completed");
+		GenericStack<Integer> stack = new GenericStack<Integer>();
+		stack.push(7);
+		stack.push(6);
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		GenericStack<Double> stack2 = new GenericStack<Double>();
+		stack2.push(7.5676);
+		stack2.push(6.43322);
+		stack2.pop();
+		stack2.pop();
+		stack2.pop();
 		
 		System.out.println("\nExercise 6:");
 		System.out.println("Exercise 6.1:");
