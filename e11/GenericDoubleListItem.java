@@ -24,7 +24,7 @@ public class GenericDoubleListItem<T> {
 	
 	public GenericDoubleListItem<T> getPreviousItem() {return previousItem;}
 	public void setPreviousItem(GenericDoubleListItem<T> item) {previousItem = item;}
-	
+	public void setNextItem(GenericDoubleListItem<T> item) {nextItem = item;}
 	/* Code is left here as printing forwards and backward was in original spec so kept incase needed later
 	 * public void printList(boolean forwards)
 	{
