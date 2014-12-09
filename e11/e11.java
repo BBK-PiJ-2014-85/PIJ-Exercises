@@ -58,9 +58,16 @@ public class e11 {
 		company.employeeNames.printList();
 		
 		System.out.println("\nExercise 4:");
-		System.out.println("To be completed");
+		GenericDoubleLinkedList<Double> sl = new GenericSortedList<Double>();
+		sl.addItem(1.34);
+		sl.addItem(7.345);
+		sl.addItem(2.342);
+		sl.addItem(3.45);
+		sl.deleteItem(1.34);
+		sl.printList();
 		
 		System.out.println("\nExercise 5:");
+		System.out.println("ERROR TO FIX: CHANGE HASHCODES TO BE BETTER COMPARED OR DOUBLES");
 		GenericStack<Integer> stack = new GenericStack<Integer>();
 		stack.push(7);
 		stack.push(6);
@@ -80,7 +87,6 @@ public class e11 {
 		
 		System.out.println("\nExercise 6.2:");
 		System.out.println("To be completed");
-		
 		
 	}
 	
