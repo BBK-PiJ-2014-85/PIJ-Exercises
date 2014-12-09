@@ -1,7 +1,5 @@
 package e11;
 
-//import e7.DoubleListItem;
-//import e7.ListItem;
 
 public class GenericDoubleLinkedList <T> {
 	
@@ -29,6 +27,12 @@ public class GenericDoubleLinkedList <T> {
 		if (firstItem != null) firstItem.printList();
 	}
 
+	public GenericDoubleListItem<T> getFirstItem()
+	{
+		return firstItem;
+	}
+	
+	public void setFirstItem(GenericDoubleListItem<T> item) {firstItem = item;};
 
 	
 	
