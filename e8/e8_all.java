@@ -7,23 +7,21 @@ public class e8_all {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		
-		
 		System.out.println("Exercise 1: Supermarket queues");
-		PersonQueue myQueue = new SupermarketPersonQueue(); //this implementation uses pointers
-		myQueue.insert(new Person("Hilda",34));
-		myQueue.insert(new Person("Helder",76));
-		System.out.println(myQueue.retrieve().getName());
-		System.out.println(myQueue.retrieve().getName());
-		System.out.println(myQueue.retrieve());
+		Supermarket sm = new Supermarket();
+		sm.insert(new Person("Hilda",34));
+		sm.insert(new Person("Helder",76));
+		System.out.println(sm.retrieve().getName());
+		System.out.println(sm.retrieve().getName());
+		System.out.println(sm.retrieve());
 		
-		System.out.println("Exercise 2: Supermarket Queue revisited");
-		PersonQueue myQueue2 = new SupermarketPersonQueue2(); //this implementation uses arrays
-		myQueue2.insert(new Person("Hilda",34));
-		myQueue2.insert(new Person("Helder",76));
-		System.out.println(myQueue2.retrieve().getName());
-		System.out.println(myQueue2.retrieve().getName());
-		System.out.println(myQueue2.retrieve());
+		System.out.println("\nExercise 2: Supermarket Queue revisited");
+		System.out.println("By changing the implementation within class supermarket from SupermarketPersonQueue to SupermarketPersonQueue2 we see the same results implemetning a different method.\n");
+		
+		
+		System.out.println("Exercise 3: Foreign people, different queues");
+		System.out.println("By changing the implementation within class supermarket from SupermarketPersonQueue to ForeignQueueLink we get the same results as either of the previous two implementations  using someone else method (BBK-PiJ-2014-22). "
+				+ "			Changes were made to his files to avoid clashes and thesea re noted within the java code files\n");
 		
 		System.out.println("Exercise 4.1: unfair queues:");
 		PersonQueue myQueue4_1 = new SimpleUnfairQueue_4_1();
