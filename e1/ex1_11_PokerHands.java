@@ -152,7 +152,7 @@ class Hand{
 	{
 		for (Card card : hand)
 		{
-			if (card.equals(input)) return true;
+			if ( card != null && card.equals(input)) return true;
 		}
 		
 		return false;
