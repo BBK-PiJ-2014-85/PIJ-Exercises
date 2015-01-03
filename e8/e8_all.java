@@ -7,12 +7,23 @@ public class e8_all {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		PersonQueue myQueue = new SupermarketPersonQueue();
 		
+		
+		System.out.println("Exercise 1: Supermarket queues");
+		PersonQueue myQueue = new SupermarketPersonQueue(); //this implementation uses pointers
 		myQueue.insert(new Person("Hilda",34));
 		myQueue.insert(new Person("Helder",76));
 		System.out.println(myQueue.retrieve().getName());
 		System.out.println(myQueue.retrieve().getName());
+		System.out.println(myQueue.retrieve());
+		
+		System.out.println("Exercise 2: Supermarket Queue revisited");
+		PersonQueue myQueue2 = new SupermarketPersonQueue2(); //this implementation uses arrays
+		myQueue2.insert(new Person("Hilda",34));
+		myQueue2.insert(new Person("Helder",76));
+		System.out.println(myQueue2.retrieve().getName());
+		System.out.println(myQueue2.retrieve().getName());
+		System.out.println(myQueue2.retrieve());
 		
 		System.out.println("Exercise 4.1: unfair queues:");
 		PersonQueue myQueue4_1 = new SimpleUnfairQueue_4_1();
