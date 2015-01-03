@@ -13,7 +13,7 @@ public class ex1_11_PokerHands {
 		while (added < 5)
 		{
 			Boolean error = false;
-			System.out.print("Please input card number " + (added + 1) + " in format (or j, q, k) follwed by suit (C,D,H,S) (q for quit):"); //ace is 1
+			System.out.print("Please input card number " + (added + 1) + " in format (or j, q, k) follwed by suit (c,d,h,s) (q for quit):"); //ace is 1
 			String input = kb.nextLine();
 			int num=0;
 			Suit suit=null;
@@ -39,10 +39,10 @@ public class ex1_11_PokerHands {
 				if (num != 10) suitChar = input.charAt(1);
 				else suitChar = input.charAt(2);
 				
-				if (suitChar == 'H') suit = Suit.HEART;
-				else if (suitChar == 'D') suit = Suit.DIAMOND;
-				else if (suitChar == 'C') suit = Suit.CLUB;
-				else if (suitChar == 'S') suit = Suit.SPADE;
+				if (suitChar == 'h') suit = Suit.HEART;
+				else if (suitChar == 'd') suit = Suit.DIAMOND;
+				else if (suitChar == 'c') suit = Suit.CLUB;
+				else if (suitChar == 's') suit = Suit.SPADE;
 				else error = true;
 			}
 			
@@ -79,7 +79,7 @@ class Hand{
 		
 		if (isStraight() && isFlush()) bestHand="Straight Flush";
 		else if (howManyOfAKind(4) == 1) bestHand ="4 of a kind";
-		else if (howManyOfAKind(3) == 1 && howManyOfAKind(4) == 1) bestHand="Full House";
+		else if (howManyOfAKind(3) == 1 && howManyOfAKind(2) == 1) bestHand="Full House";
 		else if (isFlush()) bestHand = "Flush";
 		else if (isStraight()) bestHand = "Straight";
 		else if (howManyOfAKind(3) == 1) bestHand = "Three of a kind";
