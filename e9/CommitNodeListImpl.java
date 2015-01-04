@@ -30,10 +30,10 @@ public class CommitNodeListImpl implements CommitNodeList {
 
 	@Override
 	public CommitNode getNodeWithID(int ID) {
-		
+
 		for (CommitNode node : list)
 		{
-			if (node.getID() == ID) return node;
+			if (node != null && node.getID() == ID) return node;
 		}
 
 		return null;
