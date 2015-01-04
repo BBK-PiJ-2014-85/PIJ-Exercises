@@ -27,6 +27,7 @@ public class GitMaster {
 			newNode.addParent(HEAD);
 			HEAD = newNode;
 			branchList[currentBranch] = newNode;
+			commitNodes.add(newNode);
 		}
 		else
 		{
