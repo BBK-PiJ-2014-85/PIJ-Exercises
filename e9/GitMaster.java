@@ -18,6 +18,7 @@ public class GitMaster {
 			commitNodes.add(branchList[0]);
 			branchNames[0] = "MASTER";
 			HEAD = branchList[0];
+			
 		}
 		else if (branchList[currentBranch].equals(HEAD))
 		{
@@ -53,6 +54,7 @@ public class GitMaster {
 			branchNames[i] = name;
 			branchList[i] = HEAD;
 		}
+		else System.out.println("Error: Branch name already exists.");
 	}
 	
 		private boolean branchNameExist(String name)
@@ -61,16 +63,13 @@ public class GitMaster {
 			{
 				if (name.equals(branchName)) 
 				{
-					System.out.println("Branch name exists.");
 					return true;
 				} 
 			}
-			
-			System.out.println("Branch name doesn't exist.");
 			return false;
 		}
 		
-	public void extendArrays()
+	private void extendArrays()
 	{
 		int length = branchList.length;
 		if (branchList[length - 1] != null) 
@@ -97,7 +96,9 @@ public class GitMaster {
 			while (!branchNames[i].equals(name)) i++;
 			
 			currentBranch = i;
+			HEAD = branchList[i];
 		}
+		else System.out.println("Error: Branch name doesnt exist");
 	}
 	
 	public void merge(String desc, String[] branches) //This doesn't delete branches as this was not in description so assumed not point of exercise
@@ -113,6 +114,7 @@ public class GitMaster {
 					while (!branchNames[i].equals(branch)) i++;
 					HEAD.addParent(branchList[i]);
 				}
+				else if (!branchNameExist(branch)) System.out.println("Error: branch name doesnt exist");
 			}
 		}
 	}

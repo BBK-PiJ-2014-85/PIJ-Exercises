@@ -7,10 +7,13 @@ public class e9_5_GitInternals {
 		GitMaster gm = new GitMaster();
 		gm.commit("First");
 		gm.createBranch("First Branch");
-		gm.commit("My second commit to Master.");
-		gm.changeBranch("First Branch");
-		gm.changeBranch("Non existant branch so shouldn't change");
 		System.out.println(gm.getCurrentNodeSummary()); // should be "first"
+		gm.commit("My second commit to Master.");
+		System.out.println(gm.getCurrentNodeSummary()); // should be "My second... with Parents 1"
+		gm.changeBranch("First Branch");
+		System.out.println(gm.getCurrentNodeSummary()); // should be "First"
+		gm.changeBranch("Non existant branch so shouldn't change"); // should be branch doesnt exist
+		System.out.println(gm.getCurrentNodeSummary()); // should be "My second... with Parents 1"
 		gm.commit("A first commit on the first branch.");
 		gm.commit("And a second commit on the first branch");
 		System.out.println(gm.getCurrentNodeSummary()); // should be "And a second..."
