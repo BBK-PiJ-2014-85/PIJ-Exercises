@@ -44,7 +44,6 @@ public class CommitNodeListImpl implements CommitNodeList {
 		String output = "";
 		for (int i=0; i < numberInList; i++)
 		{
-			System.out.println(list[i].getID());
 			output += list[i].getID() + (numberInList - i != 1 ? ", " : " ");
 		}
 		return output;
