@@ -113,6 +113,7 @@ public class GitMaster {
 					int i=0;
 					while (!branchNames[i].equals(branch)) i++;
 					HEAD.addParent(branchList[i]);
+					branchList[i] = HEAD;
 				}
 				else if (!branchNameExist(branch)) System.out.println("Error: branch name doesnt exist");
 			}
