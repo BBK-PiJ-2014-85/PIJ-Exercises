@@ -3,20 +3,20 @@ package e9;
 public class GitMaster {
 	
 	CommitNodeList commitNodes = new CommitNodeListImpl();
-	int lastID = 0;
+	int lastID = 0; 
 	CommitNode[] branchList = new CommitNode[4];
-	String[] branchNames = new String[4];
+	String[] branchNames = new String[4]; //Contains the names of the branches whereas branchlist contains the corresponding pointer
 	CommitNode HEAD;
-	int currentBranch=0;
+	int currentBranch=0; //integer value corresponds to location on branch arrays which reference current branch
 	
 	public void commit(String desc)
 	{
-		if (lastID == 0)
+		if (lastID == 0) //special case when adding first commit
 		{
 			branchList[0] = new CommitNode(lastID + 1, desc);
 			lastID++;
-			commitNodes.add(branchList[0]);
-			branchNames[0] = "MASTER";
+			commitNodes.add(branchList[0]); 
+			branchNames[0] = "MASTER"; //first branch always called MASTER
 			HEAD = branchList[0];
 			
 		}
@@ -47,10 +47,10 @@ public class GitMaster {
 	{
 		if (!branchNameExist(name))
 		{
-			extendArrays();
+			extendArrays(); //make arrays larger if required
 			
 			int i=0;
-			while (branchList[i] != null) i++;
+			while (branchList[i] != null) i++; // Find location of next empty space in array
 			
 			branchNames[i] = name;
 			branchList[i] = HEAD;
@@ -94,7 +94,7 @@ public class GitMaster {
 		if (branchNameExist(name))
 		{
 			int i = 0;
-			while (!branchNames[i].equals(name)) i++;
+			while (!branchNames[i].equals(name)) i++; //Find location of branch with provided name
 			
 			currentBranch = i;
 			HEAD = branchList[i];
