@@ -12,7 +12,7 @@ public class e9_5_GitInternals {
 		System.out.println(gm.getCurrentNodeSummary()); // should be "My second... with Parents 1"
 		gm.changeBranch("First Branch");
 		System.out.println(gm.getCurrentNodeSummary()); // should be "First"
-		gm.changeBranch("Non existant branch so shouldn't change"); // should be branch doesnt exist
+		gm.changeBranch("Non existant branch so shouldn't change"); // should be branch doesn't exist
 		System.out.println(gm.getCurrentNodeSummary()); // should be "My second... with Parents 1"
 		gm.commit("A first commit on the first branch.");
 		gm.commit("And a second commit on the first branch");
