@@ -10,7 +10,7 @@ public class DoubleLinkedList{
 		if (firstItem != null && firstItem.getName().equals(name)) 
 			{
 			firstItem = firstItem.getNextItem();
-			firstItem.setPreviousItem(null);
+			if (firstItem != null) firstItem.setPreviousItem(null);
 			}
 	}
 	
@@ -23,11 +23,6 @@ public class DoubleLinkedList{
 	public void printList()
 	{
 		if (firstItem != null) firstItem.printList(true);
-	}
-
-	public void printBothWays()
-	{
-		
 	}
 
 	private DoubleListItem convertToDouble(ListItem item)
