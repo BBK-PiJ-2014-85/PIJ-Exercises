@@ -67,7 +67,6 @@ public class e11 {
 		sl.printList();
 		
 		System.out.println("\nExercise 5:");
-		System.out.println("ERROR TO FIX: CHANGE HASHCODES TO BE BETTER COMPARED OR DOUBLES");
 		GenericStack<Integer> stack = new GenericStack<Integer>();
 		stack.push(7);
 		stack.push(6);
@@ -81,7 +80,7 @@ public class e11 {
 		stack2.pop();
 		stack2.pop();
 		
-		System.out.println("\nExercise 6:");
+		System.out.println("\nExercise 6:"); //Cant use array so need help
 		System.out.println("Exercise 6.1:");
 		System.out.println("To be completed");
 		
