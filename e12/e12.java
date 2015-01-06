@@ -26,7 +26,7 @@ public class e12 {
 		//SimpleMap
 		//Sorted List
 		
-		
+		 
 		
 	}
 	
