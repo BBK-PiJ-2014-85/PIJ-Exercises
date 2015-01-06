@@ -44,14 +44,14 @@ public class MySimpleMap implements SimpleMap{
 	@Override
 	public String get(int key) {
 		
-		if (isEmpty()) return "Error: List is empty so key cannot be found";
+		if (isEmpty()) return null;
 		else return recGet(key, firstItem);
 	}
 	
 	private String recGet(int key, MapItem item)
 	{
 		if (item.getKey() == key) return (String) item.getObject();
-		else if (item.getNextItem() == null) return "Error: Key not found in map";
+		else if (item.getNextItem() == null) return null;
 		else return recGet(key, item.getNextItem());
 	}
 
