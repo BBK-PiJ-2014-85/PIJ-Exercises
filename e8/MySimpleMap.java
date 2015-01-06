@@ -67,7 +67,7 @@ public class MySimpleMap implements SimpleMap{
 	private void recRemove(int key, MapItem item)
 	{
 		if (item.getNextItem() != null && item.getNextItem().getKey() == key) item.setNextItem(item.getNextItem().getNextItem());
-		else recRemove(key, item.getNextItem());
+		else if (item.getNextItem() != null) recRemove(key, item.getNextItem());
 	}
 
 	@Override
