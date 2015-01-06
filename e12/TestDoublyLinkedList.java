@@ -94,6 +94,17 @@ public class TestDoublyLinkedList {
 		list.printList();
 		assertEquals("Tom 18\nHarry 20\nPrinting backwards\nHarry 20\nTom 18\n", outContent.toString());
 	}
+	
+	@Test
+	public void testDeleteFirstAfterAddingMultiple(){
+		list.addItem(new ListItem("Tom",18));
+		list.addItem(new ListItem("Fred", 50));
+		list.addItem(new ListItem("Harry",20));
+		list.deleteItem("Tom");
+		list.printList();
+		assertEquals("Fred 50\nHarry 20\nPrinting backwards\nHarry 20\nFred 50\n", outContent.toString());
+	}
+
 
 
 	
