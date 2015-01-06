@@ -1,6 +1,6 @@
 package e11;
 
-public class GenericSortedList<T> extends GenericDoubleLinkedList<T> {
+public class GenericSortedList<T extends Number> extends GenericDoubleLinkedList<T> {
 
 	@Override
 	public void addItem(T value)
