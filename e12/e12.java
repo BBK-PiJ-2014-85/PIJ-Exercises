@@ -15,6 +15,17 @@ public class e12 {
 		//TODO: Cant find the stack that is being referenced
 		
 		//Exercise 4.2
+		//Done in TestPersonQueue
+		
+		//Exercise 4.3
+		// TODO
+		
+		//Exercise 5:
+		//DoublyLinkedList
+		//Circular List
+		//SimpleMap
+		//Sorted List
+		
 		
 	}
 	
