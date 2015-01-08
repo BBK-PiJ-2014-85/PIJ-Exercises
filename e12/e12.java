@@ -21,9 +21,9 @@ public class e12 {
 		// TODO
 		
 		//Exercise 5:
-		//DoublyLinkedList
-		//Circular List
-		//SimpleMap
+		//DoublyLinkedList - see TestDoublyLinkedList.java
+		//Circular List - see TestCircleList.java
+		//SimpleMap - see TestSimpleMap.java
 		//Sorted List
 		
 		 
