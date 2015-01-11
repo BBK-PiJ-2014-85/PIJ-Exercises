@@ -27,7 +27,8 @@ public class e10_all {
 		System.out.println("The string class cannot be extended as it is Final.");
 		
 		System.out.println("\n Exercise 8: Noah's ARC");
-		System.out.println("TODO Want to discuss to see the best way of doing this. Wait for Keith example");
+		System.out.println("See Noah.java");
+		
 	}
 	
 }
