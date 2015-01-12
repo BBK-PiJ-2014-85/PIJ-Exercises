@@ -61,7 +61,7 @@ public class TestUser {
 	public void testIDUpdated()
 	{
 		user.register(new Library());
-		assertEquals(user.getLibraryID(),7);
+		assertEquals(7, user.getLibraryID());
 	}
 	
 	@Test 
@@ -83,7 +83,7 @@ public class TestUser {
 	{
 		user.register(new Library());
 		user.register(null);
-		assertEquals(user.getLibraryID(),0);
+		assertEquals(0, user.getLibraryID());
 	}
 	
 	@Test
@@ -100,6 +100,6 @@ public class TestUser {
 	{ //Doesnt actually test anything while Library is a mock class
 		user.register(new Library());
 		user.register(new Library());
-		assertEquals(user.getLibrary().getID(), 7);
+		assertEquals(7, user.getLibrary().getID());
 	}
 }
