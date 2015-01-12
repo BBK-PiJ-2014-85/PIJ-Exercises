@@ -2,6 +2,7 @@ package e13;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestUser {
@@ -11,7 +12,7 @@ public class TestUser {
 	@Before
 	public void setUp()
 	{
-		user = new User("Joe Bloggs");
+		user = new UserImpl("Joe Bloggs");
 	}
 	
 	@Test
@@ -20,9 +21,9 @@ public class TestUser {
 	}
 	
 	@Test
-	public void tetsNullName()
+	public void testNullName()
 	{
-		User nullUser = new User(null);
+		User nullUser = new UserImpl(null);
 		assertNull(nullUser.getName());
 	}
 
