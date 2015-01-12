@@ -13,14 +13,12 @@ public class BookImpl implements Book{
 
 	@Override
 	public String getAuthorName() {
-		// TODO Auto-generated method stub
-		return null;
+		return authorName;
 	}
 
 	@Override
 	public String getTitle() {
-		// TODO Auto-generated method stub
-		return null;
+		return title;
 	}
 	
 	
