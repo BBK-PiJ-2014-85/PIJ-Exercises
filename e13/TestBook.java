@@ -25,6 +25,14 @@ public class TestBook {
 		assertEquals(book.getTitle(), "title");
 	}
 	
+	@Test 
+	public void testNull()
+	{
+		Book nullBook = new BookImpl(null,null);
+		assertEquals(nullBook.getTitle(), null);
+		assertEquals(nullBook.getAuthorName(), null);
+	}
+	
 	// Should add a way of testing final?
 
 }
