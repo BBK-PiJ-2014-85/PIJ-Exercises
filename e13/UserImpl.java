@@ -12,19 +12,17 @@ public class UserImpl implements User{
 	
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return name;
 	}
 
 	@Override
 	public int getLibraryID() {
-		// TODO Auto-generated method stub
-		return 0;
+		return libraryID;
 	}
 
 	@Override
 	public void setLibrayID(int id) {
-		// TODO Auto-generated method stub
+		libraryID = id;
 		
 	}
 
