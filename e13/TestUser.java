@@ -31,23 +31,75 @@ public class TestUser {
 	@Test
 	public void testId()
 	{
-		user.setLibrayID(12345678);
+		user.setLibraryID(12345678);
 		assertEquals(user.getLibraryID(),12345678);
 	}
 	
 	@Test
 	public void testNullID()
 	{
-		assertNull(user.getLibraryID());
+		assertEquals(user.getLibraryID(),0);
 	}
 	
 	@Test
 	public void testReplaceNormal()
 	{
-		user.setLibrayID(123);
-		user.setLibrayID(456);
+		user.setLibraryID(123);
+		user.setLibraryID(456);
 		assertEquals(user.getLibraryID(), 456);
 	}
 	
-
+	@Test
+	public void testRegister()
+	{
+		user.register(new Library());
+		assertEquals(user.getLibrary().getLibrary(), "Library name here");
+		assertEquals(user.getLibrary().getID(), 7);
+	}
+	
+	@Test 
+	public void testIDUpdated()
+	{
+		user.register(new Library());
+		assertEquals(user.getLibraryID(),7);
+	}
+	
+	@Test 
+	public void testLibraryNull()
+	{
+		assertNull(user.getLibrary());
+	}
+	
+	@Test
+	public void testLibrarySetNullAfterOne()
+	{
+		user.register(new Library());
+		user.register(null);
+		assertNull(user.getLibrary());
+	}
+	
+	@Test
+	public void testLibraryIDSetZeroAfterLibrarySetNull()
+	{
+		user.register(new Library());
+		user.register(null);
+		assertEquals(user.getLibraryID(),0);
+	}
+	
+	@Test
+	public void testLibraryReplacesSucessfully()
+	{ //Doesnt actually test anything while Library is a mock class 
+		user.register(new Library());
+		user.register(new Library());
+		assertEquals(user.getLibrary().getLibrary(), "Library name here");
+		
+	}
+	
+	@Test
+	public void testLibraryReplacesIDWhenSucessfully()
+	{ //Doesnt actually test anything while Library is a mock class
+		user.register(new Library());
+		user.register(new Library());
+		assertEquals(user.getLibrary().getID(), 7);
+	}
 }
