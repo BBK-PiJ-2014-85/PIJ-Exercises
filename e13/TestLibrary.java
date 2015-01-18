@@ -70,7 +70,72 @@ public class TestLibrary {
 	}
 	
 	
+	@Test
+	public void testTakeBookReturnNullWhenNoneAdded()
+	{
+		assertNull(lib.takeBook("Book 1"));
+	}
+	
+	private void assertBookEquals(Book bk, String title, String author)
+	{
+		assertEquals(title, bk.getTitle());
+		assertEquals(author, bk.getAuthorName());
+	}
 	
 	
+	@Test
+	public void testTakeBookOnceAdded()
+	{
+		lib.addBook("Title1","Author1");
+		Book bk = lib.takeBook("Title 1");
+		assertBookEquals(bk, "Title1", "Author1");
+	}
+	
+	@Test
+	public void testOnlyTakeBookOutOnce()
+	{
+		lib.addBook("Title1","Author1");
+		lib.takeBook("Title 1");
+		assertNull(lib.takeBook("Title 1"));
+	}
+	
+	@Test
+	public void testOnceBookReturnedCanBeTakenOut()
+	{
+		lib.addBook("Title1","Author1");
+		Book bk = lib.takeBook("Title 1");
+		lib.returnBook(bk);
+		Book bk2 = lib.takeBook("Title 1");
+		assertBookEquals(bk2, "Title1", "Author1");
+	}
+
+	@Test
+	public void testBookNotAddedByOnlyReturning()
+	{
+		Book bk = lib.takeBook("Title 1");
+		lib.returnBook(bk);
+		assertNull(lib.takeBook("Title 1"));
+	}
+	//could also check multiple states (i.e. if first is taken out that adds correctly)
+	@Test 
+	public void testAddingMultipleBooksAndTakeOut2nd()
+	{
+		lib.addBook("Title 1", "Author 1");
+		lib.addBook("Title 2", "Author 2");
+		Book bk2 = lib.takeBook("Title 2");
+		assertBookEquals(bk2, "Title 2", "Author 2");
+	}
+	
+	@Test 
+	public void testAddingMultipleBooksAndTakeOutReturnAndTakeOut()
+	{
+		lib.addBook("Title 1", "Author 1");
+		lib.addBook("Title 2", "Author 2");
+		Book bk2 = lib.takeBook("Title 2");
+		assertNull(lib.takeBook("Title 2"));
+		lib.returnBook(bk2);
+		Book bk3 = lib.takeBook("Title 2");
+		assertBookEquals(bk3, "Title 2", "Author 2");
+	}
 	
 }
