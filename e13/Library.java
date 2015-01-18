@@ -3,7 +3,7 @@ package e13;
 /**
  * Class represents a library holding all relevant information.
  * 
- * Holds the ID and name of the library, as well as the max book limit
+ * Holds the name of the library, as well as the max book limit
  * per user.
  * 
  * @author Paul
@@ -11,19 +11,13 @@ package e13;
  */
 
 public interface Library {
-
+	
 	/**
 	 * Returns the name of the Library.
 	 * @return the name of the library
 	 */
 	
 	String getLibrary();
-	
-	/**
-	 * Return the ID number of the Library.
-	 * @return the ID of the library
-	 */
-	int getID();
 	
 	/**
 	 * Sets the maximum number of books a user may borrow at any one time.
