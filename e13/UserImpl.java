@@ -18,12 +18,12 @@ public class UserImpl implements User{
 	}
 
 	@Override
-	public int getLibraryID() {
+	public int getID() {
 		return libraryID;
 	}
 
 	@Override
-	public void setLibraryID(int id) {
+	public void setID(int id) {
 		libraryID = id;
 		
 	}
@@ -31,8 +31,8 @@ public class UserImpl implements User{
 	@Override
 	public void register(LibraryImpl lib) {
 		this.lib = lib;
-		if (lib != null) setLibraryID(lib.getID());
-		else setLibraryID(0);
+		if (lib != null) setID(lib.getID());
+		else setID(0);
 	}
 
 	@Override
