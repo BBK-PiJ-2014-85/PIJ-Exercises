@@ -49,7 +49,25 @@ public class TestLibrary {
 		assertEquals(5,lib.getMaxBooks());
 	}
 	
+	@Test
+	public void testIDCreatedAndReturned()
+	{
+		assertEquals(1, lib.getID("Bob"));
+	}
 	
+	@Test
+	public void testIDReturnedSame()
+	{
+		lib.getID("Bob");
+		assertEquals(1, lib.getID("Bob"));
+	}
+	
+	@Test
+	public void test2ndIDUnique()
+	{
+		lib.getID("Bob");
+		assertEquals(2, lib.getID("Fred"));
+	}
 	
 	
 	
