@@ -33,4 +33,11 @@ public interface Library {
 	 */
 	int getMaxBooks();
 	
+	/**
+	 * Returns the ID for the of a person for a given name in this Library
+	 * @param name the name of the person who is at this Library
+	 * @return the ID of the person
+	 */
+	int getID(String name);
+	
 }
