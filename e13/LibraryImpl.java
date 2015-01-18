@@ -1,17 +1,28 @@
 package e13;
 
-public class LibraryImpl {
+public class LibraryImpl implements Library{
 
-	//mock object
+	public LibraryImpl(String name)
+	{
+		
+	}
 	
+	@Override
 	public String getLibrary()
 	{
 		return "Library name here";
 	}
-	
-	public int getID()
-	{
-		return 7;
+
+	@Override
+	public void setMaxBooks(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getMaxBooks() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	
