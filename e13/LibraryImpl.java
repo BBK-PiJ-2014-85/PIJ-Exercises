@@ -26,5 +26,11 @@ public class LibraryImpl implements Library{
 		return maxBooks;
 	}
 	
+	@Override 
+	public int getID(String name)
+	{
+		return 0;
+	}
+	
 	
 }
