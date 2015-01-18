@@ -64,6 +64,24 @@ public class LibraryImpl implements Library{
 		for (int i=0; i<namesInList; i++) newArray[i] = names[i];
 		names = newArray;
 	}
+
+	@Override
+	public void addBook(String title, String author) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Book takeBook(String title) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void returnBook(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
