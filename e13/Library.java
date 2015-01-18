@@ -41,7 +41,9 @@ public interface Library {
 	int getID(String name);
 	
 	/**
-	 * Adds a book to the Library.
+	 * Adds a book to the Library. It has not been specified what to do in instances of duplicate books with
+	 * same name and author being added, and so this has been ignored and assumed that
+	 * it cannot happen.
 	 * @param title the title of the book
 	 * @param author the author of the book
 	 */
