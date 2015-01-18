@@ -40,4 +40,25 @@ public interface Library {
 	 */
 	int getID(String name);
 	
+	/**
+	 * Adds a book to the Library.
+	 * @param title the title of the book
+	 * @param author the author of the book
+	 */
+	void addBook(String title, String author);
+	
+	/**
+	 * Takes a book out of the library
+	 * @param title the title of the book to take out
+	 * @return the book being taken out form the library, or null if it doesn't exist in the library
+	 * or is already taken out
+	 */
+	Book takeBook(String title);
+	
+	/**
+	 * Marks the book as not taken from the library 
+	 * @param book the book being returned
+	 */
+	void returnBook(Book book);
+	
 }
