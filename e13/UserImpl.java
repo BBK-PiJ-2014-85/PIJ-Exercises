@@ -5,7 +5,7 @@ public class UserImpl implements User{
 
 	final private String name;
 	private int libraryID;
-	private Library lib;
+	private LibraryImpl lib;
 	
 	public UserImpl(String name)
 	{
@@ -29,14 +29,14 @@ public class UserImpl implements User{
 	}
 
 	@Override
-	public void register(Library lib) {
+	public void register(LibraryImpl lib) {
 		this.lib = lib;
 		if (lib != null) setLibraryID(lib.getID());
 		else setLibraryID(0);
 	}
 
 	@Override
-	public Library getLibrary() {
+	public LibraryImpl getLibrary() {
 		//if (lib == null) return null;
 		return lib;
 	}
