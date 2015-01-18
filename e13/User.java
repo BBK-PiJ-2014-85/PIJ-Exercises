@@ -3,7 +3,7 @@ package e13;
 /**
  * Class holds user information on the Library system. 
  * 
- * Contains name and library ID
+ * Contains User ID and library name
  * 
  * @author Paul
  */
@@ -17,18 +17,18 @@ public interface User {
 	String getName();
 	
 	/**
-	 * Returns the Library ID of the user. 
+	 * Returns the ID of the user. 
 	 * 
-	 * @return the Library ID of the user
+	 * @return the ID of the user
 	 */
-	int getLibraryID();
+	int getID();
 	
 	/**
-	 * Sets the library ID for the user.
-	 * @param id the library ID for the user
+	 * Sets the ID for the user.
+	 * @param id the ID for the user
 	 */
 	
-	void setLibraryID(int id);
+	void setID(int id);
 	
 	/**
 	 * Registers the user at a library.
