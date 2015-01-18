@@ -52,18 +52,10 @@ public class TestUser {
 	@Test
 	public void testRegister()
 	{
-		user.register(new LibraryImpl());
-		assertEquals(user.getLibrary().getLibrary(), "Library name here");
-		assertEquals(user.getLibrary().getID(), 7);
+		user.register(new LibraryImpl("Library Name"));
+		assertEquals( "Library Name", user.getLibrary());
 	}
-	
-	@Test 
-	public void testIDUpdated()
-	{
-		user.register(new LibraryImpl());
-		assertEquals(7, user.getID());
-	}
-	
+		
 	@Test 
 	public void testLibraryNull()
 	{
@@ -73,7 +65,7 @@ public class TestUser {
 	@Test
 	public void testLibrarySetNullAfterOne()
 	{
-		user.register(new LibraryImpl());
+		user.register(new LibraryImpl("Library Name"));
 		user.register(null);
 		assertNull(user.getLibrary());
 	}
@@ -81,7 +73,7 @@ public class TestUser {
 	@Test
 	public void testLibraryIDSetZeroAfterLibrarySetNull()
 	{
-		user.register(new LibraryImpl());
+		user.register(new LibraryImpl("Library Name"));
 		user.register(null);
 		assertEquals(0, user.getID());
 	}
@@ -89,17 +81,10 @@ public class TestUser {
 	@Test
 	public void testLibraryReplacesSucessfully()
 	{ //Doesnt actually test anything while Library is a mock class 
-		user.register(new LibraryImpl());
-		user.register(new LibraryImpl());
-		assertEquals(user.getLibrary().getLibrary(), "Library name here");
+		user.register(new LibraryImpl("Library Name"));
+		user.register(new LibraryImpl("Library Name"));
+		assertEquals("Library Name", user.getLibrary().getLibrary());
 		
 	}
 	
-	@Test
-	public void testLibraryReplacesIDWhenSucessfully()
-	{ //Doesnt actually test anything while Library is a mock class
-		user.register(new LibraryImpl());
-		user.register(new LibraryImpl());
-		assertEquals(7, user.getLibrary().getID());
-	}
 }
