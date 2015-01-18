@@ -31,22 +31,22 @@ public class TestUser {
 	@Test
 	public void testId()
 	{
-		user.setLibraryID(12345678);
-		assertEquals(user.getLibraryID(),12345678);
+		user.setID(12345678);
+		assertEquals(user.getID(),12345678);
 	}
 	
 	@Test
 	public void testNullID()
 	{
-		assertEquals(user.getLibraryID(),0);
+		assertEquals(user.getID(),0);
 	}
 	
 	@Test
 	public void testReplaceNormal()
 	{
-		user.setLibraryID(123);
-		user.setLibraryID(456);
-		assertEquals(user.getLibraryID(), 456);
+		user.setID(123);
+		user.setID(456);
+		assertEquals(user.getID(), 456);
 	}
 	
 	@Test
@@ -61,7 +61,7 @@ public class TestUser {
 	public void testIDUpdated()
 	{
 		user.register(new LibraryImpl());
-		assertEquals(7, user.getLibraryID());
+		assertEquals(7, user.getID());
 	}
 	
 	@Test 
@@ -83,7 +83,7 @@ public class TestUser {
 	{
 		user.register(new LibraryImpl());
 		user.register(null);
-		assertEquals(0, user.getLibraryID());
+		assertEquals(0, user.getID());
 	}
 	
 	@Test
