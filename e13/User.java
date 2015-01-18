@@ -30,9 +30,19 @@ public interface User {
 	
 	void setLibraryID(int id);
 	
-	void register(Library lib);
+	/**
+	 * Registers the user at a library.
+	 * @param lib the library Object for which the user should be registered
+	 */
 	
-	Library getLibrary();
+	void register(LibraryImpl lib);
+	
+	/**
+	 * Returns the library where the user in registered.
+	 * @return the library where the user in registered
+	 */
+	
+	LibraryImpl getLibrary();
 	
 	
 	
