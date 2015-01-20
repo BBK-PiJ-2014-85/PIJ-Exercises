@@ -28,12 +28,26 @@ public class e14 {
 		endTime = System.nanoTime();
 		System.out.println("Answer for 45 is " + fib45 + " with memoization and took " + (endTime-startTime)  + " milliseconds");
 		*/
-		//Exercise 2:
 		
+		//Exercise 2:
+		/*
 		List<String> anagram = Anagrams.Anagram("and");
 		
 		for (String word : anagram) System.out.println(word);
+		*/
 		
+		//Exercise 3 
+		/*
+		List<Integer> hailstone = HailstoneNumbers.hailstone(50);
+		for (Integer num : hailstone) System.out.println(num);
+		*/
+		
+		//Exercise 4:
+		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6,7}, 3));
+		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6,7}, 6));
+		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6,7}, 9));
+		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6}, -1));
 	}
+	
 	
 }
