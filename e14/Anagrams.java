@@ -28,10 +28,10 @@ private static List<String> createAnagram( List<String> listSoFar, String inputR
 {
 	List<String> nextList = new ArrayList<String>();
 	char letter = inputRemaining.charAt(0);
-	//System.out.println(letter);
+
 	for (String word : listSoFar)
 	{
-		//System.out.println(word);
+
 		for (int i = 0; i <= word.length() ; i++)
 		{
 			nextList.add(addToWord(i,0,letter, word, ""));
