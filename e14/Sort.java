@@ -81,6 +81,7 @@ public class Sort {
 			}
 			
 			rtnList[added] = list[0];
+			added++;
 			
 			for (int i = 0; i < sortedHigher.length; i++)
 			{
