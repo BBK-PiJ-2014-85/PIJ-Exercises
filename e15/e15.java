@@ -23,7 +23,7 @@ public class e15 {
 		 */
 		
 		/*
-		 * Exercise 3: Ex3aErrorHandlingOnInput class shows solution
+		 * Exercise 3: Ex3aErrorHandlingOnInput and Ex3bErrorHandlingOnInput classes show solutions
 		 */
 
 
