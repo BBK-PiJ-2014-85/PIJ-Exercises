@@ -21,6 +21,18 @@ public class TestPrimeDivisorList {
 		assertEquals("[ 5 = 5 ]",list.toString());
 	}
 	
+	@Test(expected=IllegalArgumentException.class)
+	public void testZeroCantBeAdded()
+	{
+		list.add(0);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testNegativeCantBeAdded()
+	{
+		list.add(-3);
+	}
+	
 	@Test
 	public void testTwoPrimes() {
 		list.add(5);
@@ -33,6 +45,14 @@ public class TestPrimeDivisorList {
 		list.add(5);
 		list.add(5);
 		list.add(3);
+		assertEquals("[ 3 * 5^2 = 75 ]",list.toString());
+	}
+	
+	@Test
+	public void testTwoPrimesSameOutOfOrder() {
+		list.add(5);
+		list.add(3);
+		list.add(5);
 		assertEquals("[ 3 * 5^2 = 75 ]",list.toString());
 	}
 	
