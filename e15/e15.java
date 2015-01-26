@@ -25,6 +25,10 @@ public class e15 {
 		/*
 		 * Exercise 3: Ex3aErrorHandlingOnInput and Ex3bErrorHandlingOnInput classes show solutions
 		 */
+		
+		/*
+		 * Exercise 4: Solution contained in class Ex4Patient
+		 */
 
 
 		
