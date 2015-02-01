@@ -47,6 +47,12 @@ public class e14 {
 		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6,7}, 6));
 		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6,7}, 9));
 		//System.out.println(BinarySearch.contains(new int[] {1,2,3,4,5,6}, -1));
+	
+		//Exercise 5
+		ArrayMethods.printArray(Sort.mergeSort(new int[] {1,4,6,2,5,7,8,9}));
+		ArrayMethods.printArray(Sort.quickSort(new int[] {1,4,6,2,5,7,8,9}));
+		
+		
 	}
 	
 	
