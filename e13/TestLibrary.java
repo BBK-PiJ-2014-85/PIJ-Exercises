@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TestLibrary {
-
+/*
 	Library lib;
 	
 	@Before
@@ -137,5 +137,5 @@ public class TestLibrary {
 		Book bk3 = lib.takeBook("Title 2");
 		assertBookEquals(bk3, "Title 2", "Author 2");
 	}
-	
+*/	
 }

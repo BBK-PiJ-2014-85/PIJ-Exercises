@@ -1,8 +1,8 @@
 package e13;
 
 
-public class UserImpl implements User{
-
+public class UserImpl /*implements User*/{
+/*
 	final private String name;
 	private int libraryID;
 	private LibraryImpl lib;
@@ -40,5 +40,5 @@ public class UserImpl implements User{
 		//if (lib == null) return null;
 		return lib;
 	}
-
+*/
 }

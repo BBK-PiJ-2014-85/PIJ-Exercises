@@ -1,12 +1,14 @@
 package e13;
 
-public class LibraryImpl implements Library{
-
+public class LibraryImpl /*implements Library*/{
+/*
 	String name;
 	int maxBooks;
 	String[] names = new String[1];
 	int namesInList;
-	
+
+	Book[] booksIn = new Book[1];
+	Book[] booksOut = new Book[1];
 	
 	public LibraryImpl(String name)
 	{
@@ -67,21 +69,39 @@ public class LibraryImpl implements Library{
 
 	@Override
 	public void addBook(String title, String author) {
-		// TODO Auto-generated method stub
-		
+		Book newBook = new BookImpl(title,author);
+		addToList(booksIn,newBook);
 	}
 
 	@Override
 	public Book takeBook(String title) {
-		// TODO Auto-generated method stub
+		if inList(booksIn,title)
+		{
+			Book outBook = removeFromList(booksIn,title);
+			addToList(booksOut, outBook);
+			return outBook;
+		}
 		return null;
 	}
 
 	@Override
 	public void returnBook(Book book) {
-		// TODO Auto-generated method stub
-		
+		if inList(booksOut, book) 
+		{
+			removeFromList(booksOut,book);
+			addToList(booksIn,book);
+		}
 	}
 	
+	private Book removeFromList(Book[] list, Book book)
+	{
+		
+		return book;
+	}
 	
+	private void bookEquals()
+	{
+		
+	}
+*/	
 }

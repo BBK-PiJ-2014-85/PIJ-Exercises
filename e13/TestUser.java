@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TestUser {
-
+/*
 	User user;
 	
 	@Before
@@ -86,5 +86,5 @@ public class TestUser {
 		assertEquals("Library Name", user.getLibrary().getLibrary());
 		
 	}
-	
+*/	
 }
