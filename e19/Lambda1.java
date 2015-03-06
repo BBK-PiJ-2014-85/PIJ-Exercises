@@ -15,6 +15,7 @@ public class Lambda1 {
 		Comparator<String> lengthDecreasing = (s,t) -> (t.length() - s.length());
 		Comparator<String> firstChar = (s,t) -> Character.compare(s.charAt(0),t.charAt(0));
 		Comparator<String> eFirst = (s,t) -> {if (s.charAt(0) != 'e' && t.charAt(0) == 'e') return 1; else return 0;};
+		Comparator<String> eFirstMethod = StringUtils::eChecker;
 
 		sortArray(array,lengthIncreasing);
 		System.out.println("Length order increasing: " + Arrays.asList(array));
@@ -24,7 +25,10 @@ public class Lambda1 {
 		System.out.println("Sorted by first character: " + Arrays.asList(array));
 		sortArray(array,eFirst);
 		System.out.println("'e' first, then everything else: " + Arrays.asList(array));
-
+		
+		sortArray(array,lengthIncreasing);
+		sortArray(array,eFirstMethod);
+		System.out.println("'e' first by method: " + Arrays.asList(array));
 	
 	}
 	
@@ -48,5 +52,7 @@ public class Lambda1 {
 			}
 		}
 	}
+	
+	
 	
 }
