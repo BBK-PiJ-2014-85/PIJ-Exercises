@@ -2,6 +2,7 @@ package e19;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 public class Lambda1 {
 
@@ -39,6 +40,18 @@ public class Lambda1 {
 		System.out.println(StringUtils.betterEntry("test1", "test2...", (s1, s2) -> s1.length() > s2.length()));
 		System.out.println(StringUtils.betterEntry("test1", "test2...", (s1, s2) -> true));
 
+		// Exercise 5
+		
+		List<String> words = Arrays.asList("cat","bat","elephant","donkey","gibbon");
+		
+		List<String> shortWords = StringUtils.allMatches(words, s -> s.length() < 4);
+		List<String> wordsWithB = StringUtils.allMatches(words, s -> s.contains("b"));
+		List<String> evenLengthWords =
+		StringUtils.allMatches(words, s -> (s.length() % 2) == 0);
+		
+		System.out.println(shortWords);
+		System.out.println(wordsWithB);
+		System.out.println(evenLengthWords);
 		
 	}
 	
