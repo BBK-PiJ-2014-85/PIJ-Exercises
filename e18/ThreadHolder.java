@@ -15,7 +15,7 @@ public class ThreadHolder implements Runnable {
 	@Override
 	public void run() {
 		command.run();
-		threadManager.lowerCount();
+	//	threadManager.lowerCount();
 		notify();
 		
 	}

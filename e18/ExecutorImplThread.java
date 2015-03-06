@@ -14,6 +14,7 @@ public class ExecutorImplThread implements Runnable{
 		threadNum = num;
 		queue = taskQueue;
 		running = true;
+		System.out.println("Thread " + threadNum + " created.");
 	}
 	
 	@Override
@@ -22,10 +23,8 @@ public class ExecutorImplThread implements Runnable{
 		while(running)
 		{
 			try {
-				System.out.println(1);
 				currentCommand = queue.take();
-				System.out.println("Thread " + threadNum + " starting to run program.");
-
+				System.out.println("Thread " + threadNum + " starting to run program " + ((WaitSecs)currentCommand).runNum);
 				currentCommand.run();
 			} catch (InterruptedException e) {
 				if (!running) System.out.println("Thread " + threadNum + " stopped.");

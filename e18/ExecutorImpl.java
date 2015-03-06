@@ -7,17 +7,22 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executor;
 
 public class ExecutorImpl implements Executor{
-
+	static int runNum=1;
 	int threadNum;
 	
 	public static void main(String[] args)
 	{
 		ExecutorImpl ex = new ExecutorImpl(2,5);
 
-		ex.execute(new WaitSecs(1,5));
-		ex.execute(new WaitSecs(2,1));
-	//	ex.execute(new WaitSecs(3,3));
-	//	ex.execute(new WaitSecs(4,3));
+		ex.execute(new WaitSecs(1,1));
+		ex.execute(new WaitSecs(2,2));
+		ex.execute(new WaitSecs(3,1));
+		ex.execute(new WaitSecs(4,2));
+		ex.execute(new WaitSecs(5,3));
+		ex.execute(new WaitSecs(6,1));
+		ex.execute(new WaitSecs(7,1));
+		
+		ex.stopAll();
 	}
 	
 	
@@ -29,39 +34,40 @@ public class ExecutorImpl implements Executor{
 
 		queue = new ArrayBlockingQueue<Runnable>(maxQueueSize);
 		ExecutorImplThread tempThread;
-
-		System.out.println(2);		
+		
 		for (int i=1; i<= threadNum; i++) 
 		{
 			tempThread = new ExecutorImplThread(i, queue);
 			scripts.add(tempThread);
-			threads.add(new Thread(new ExecutorImplThread(i, queue)));
+			threads.add(new Thread(tempThread));
 		}
-		System.out.println(3);
 		
 		for (Thread t : threads) t.start();
 	}
 		
 	@Override
 	public void execute(Runnable command) {
-		System.out.println("Adding command.");
+		System.out.println("Adding command " + ((WaitSecs)command).runNum);
+		runNum++;
 		try {
-			System.out.println("Adding command.");
+			synchronized (queue)
+			{
+			System.out.println("Attemping to add " + ((WaitSecs)command).runNum + " to queue.");
 			queue.put(command);
-			notifyAll();
+			queue.notifyAll();
+			}
 		} catch (InterruptedException e) {
 			execute(command);
-		} catch (IllegalMonitorStateException e)
-		{
-			System.out.println("Notifying all that command has run ");
 		}
 	}
 	
 	public void stopAll()
 	{
+		synchronized (queue)
+		{
 		for (ExecutorImplThread t : scripts) t.stopRunning();
-		
-		notifyAll();
+		queue.notifyAll();
+		}
 	}
 }
 
