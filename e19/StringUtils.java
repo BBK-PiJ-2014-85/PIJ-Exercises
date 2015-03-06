@@ -23,16 +23,13 @@ public class StringUtils {
 		return (l.better(e1,e2) ? e1 : e2);
 	}
 	
-	public static List<String> allMatches(List<String> input, Predicate<String> p)
+	public static <T> List<T> allMatches(List<T> input, Predicate<T> p)
 	{
-		List<String> matches = 
+		List<T> matches = 
 						input.stream()
 						.filter(x -> p.test(x))
 						.collect(Collectors.toList())
 						;
-		
-//		for (String s : input) if (p.test(s)) matches.add(s);
-		
 		return matches;
 
 	}
