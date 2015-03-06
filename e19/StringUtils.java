@@ -8,4 +8,14 @@ public class StringUtils {
 		else return 0;
 	}
 	
+	public static String betterString(String s1, String s2, TwoStringsPredicate l)
+	{
+		return (l.better(s1, s2) ? s1 : s2);
+	}
+	
+	public static <T> T betterEntry(T e1, T e2, TwoElementsPredicate<T> l)
+	{
+		return (l.better(e1,e2) ? e1 : e2);
+	}
+	
 }
