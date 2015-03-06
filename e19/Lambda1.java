@@ -28,8 +28,18 @@ public class Lambda1 {
 		
 		sortArray(array,lengthIncreasing);
 		sortArray(array,eFirstMethod);
-		System.out.println("'e' first by method: " + Arrays.asList(array));
+		
+
+//		Exercise 3:
 	
+		System.out.println(StringUtils.betterString("test1", "test2...", (s1, s2) -> s1.length() > s2.length()));
+		System.out.println(StringUtils.betterString("test1", "test2...", (s1, s2) -> true));
+
+//Excerise 4:
+		System.out.println(StringUtils.betterEntry("test1", "test2...", (s1, s2) -> s1.length() > s2.length()));
+		System.out.println(StringUtils.betterEntry("test1", "test2...", (s1, s2) -> true));
+
+		
 	}
 	
 	private static void sortArray(String[] array, Comparator<String> cp)
