@@ -34,9 +34,9 @@ public class StringUtils {
 		return matches;
 	}
 	
-	public static List<String> transformedList(List<String> input, Function<String,String> f)
+	public static <T> List<T> transformedList(List<T> input, Function<T,T> f)
 	{
-		List<String> transformed = 
+		List<T> transformed = 
 				input.stream()
 				.map(f)
 				.collect(Collectors.toList())
