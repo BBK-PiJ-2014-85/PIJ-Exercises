@@ -2,6 +2,7 @@ package e19;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -31,7 +32,16 @@ public class StringUtils {
 						.collect(Collectors.toList())
 						;
 		return matches;
-
+	}
+	
+	public static List<String> transformedList(List<String> input, Function<String,String> f)
+	{
+		List<String> transformed = 
+				input.stream()
+				.map(f)
+				.collect(Collectors.toList())
+				;
+		return transformed;
 	}
 	
 }

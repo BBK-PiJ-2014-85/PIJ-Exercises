@@ -53,6 +53,18 @@ public class Lambda1 {
 		System.out.println(wordsWithB);
 		System.out.println(evenLengthWords);
 		
+		// Exercise 7
+		
+		List<String> excitingWords = StringUtils.transformedList(words, s -> s + "!");
+		List<String> eyeWords =
+		StringUtils.transformedList(words, s -> s.replace("i", "eye"));
+		List<String> upperCaseWords =
+		StringUtils.transformedList(words, String::toUpperCase);
+		
+		System.out.println(excitingWords);
+		System.out.println(eyeWords);
+		System.out.println(upperCaseWords);
+		
 	}
 	
 	private static void sortArray(String[] array, Comparator<String> cp)
